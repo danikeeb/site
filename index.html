@@ -1033,6 +1033,17 @@ BLOCK — КОНСУЛЬТАЦИЯ
     slider.addEventListener('mousemove', function(e) { if (!isDown) return; e.preventDefault(); slider.scrollLeft = scrollLeft - (e.pageX - slider.offsetLeft - startX) * 1.2; });
   }
 })();
+
+// Отслеживание конверсий: клики по Telegram и WhatsApp
+document.querySelectorAll('a[href*="t.me"], a[href*="wa.me"]').forEach(function(link) {
+  link.addEventListener('click', function() {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18144063990/s9XMCNy29qgcEPbj4ctD',
+      'value': 1.0,
+      'currency': 'RUB'
+    });
+  });
+});
 </script>
 </body>
 </html>
