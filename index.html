@@ -7,7 +7,6 @@
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-K5Q65D2F');</script>
-  <!-- End Google Tag Manager -->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18144063990"></script>
   <script>
@@ -43,14 +42,7 @@
   <meta name="twitter:description" content="Персональный онлайн-тренер. Тренировки по видеосвязи для девушек по всему миру. Без жёсткости.">
   <meta name="twitter:image" content="https://keebteachyou.fit/img/about_1.jpg">
 
-  <!-- Yandex -->
   <meta name="yandex" content="noarchive">
-
-  <!-- Fonts & Styles -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -61,10 +53,7 @@
   "jobTitle": "Персональный тренер",
   "description": "Персональный онлайн-тренер для девушек. Помогает выглядеть лучше и кайфовать от процесса без жёсткости. Работает по всему миру.",
   "url": "https://keebteachyou.fit/",
-  "sameAs": [
-    "https://t.me/danikeeb",
-    "https://www.instagram.com/dani.keeb"
-  ],
+  "sameAs": ["https://t.me/danikeeb", "https://www.instagram.com/dani.keeb"],
   "knowsAbout": ["fitness", "personal training", "weight loss", "online coaching"]
 }
 </script>
@@ -78,337 +67,1088 @@
   "description": "Персональные онлайн-тренировки для девушек по всему миру без жёсткости"
 }
 </script>
+
+<style>
+/* ─────────── RESET & BASE ─────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #fff;
+  color: #1d1d1f;
+  font-size: 17px;
+  line-height: 1.47;
+  letter-spacing: -0.022em;
+  overflow-x: hidden;
+}
+img, video, iframe { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+section[id] { scroll-margin-top: 60px; }
+
+:root {
+  --black:  #1d1d1f;
+  --grey:   #86868b;
+  --grey2:  #6e6e73;
+  --light:  #f5f5f7;
+  --line:   #d2d2d7;
+  --blue:   #0071e3;
+  --blue2:  #0077ed;
+  --blue-light: #5fb4ff;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 22px; }
+
+/* ─────────── NAVIGATION ─────────── */
+.site-nav {
+  position: sticky; top: 0; z-index: 1000;
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  height: 52px;
+  display: flex; align-items: center;
+}
+.nav-inner {
+  width: 100%; max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 22px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-size: 21px; font-weight: 600; letter-spacing: -0.5px;
+}
+.nav-logo span { color: var(--grey); font-weight: 400; }
+.nav-links { display: flex; gap: 32px; align-items: center; }
+.nav-links a {
+  font-size: 13px; opacity: 0.88; transition: opacity 0.2s;
+}
+.nav-links a:hover { opacity: 1; }
+.nav-cta { color: var(--blue) !important; }
+
+/* ─────────── BUTTONS ─────────── */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--blue); color: #fff;
+  padding: 12px 24px;
+  border-radius: 980px;
+  font-size: 15px; font-weight: 500;
+  border: none; cursor: pointer;
+  transition: background 0.2s;
+  letter-spacing: -0.01em;
+}
+.btn:hover { background: var(--blue2); }
+.btn.outline {
+  background: transparent; color: var(--blue);
+  border: 1px solid var(--blue);
+}
+.btn.outline:hover { background: rgba(0,113,227,0.05); }
+.btn.dark { background: var(--black); color: #fff; }
+.btn.dark:hover { background: #000; }
+.btn.large { padding: 14px 28px; font-size: 17px; }
+
+.link-arrow {
+  color: var(--blue); display: inline-flex; align-items: center; gap: 4px;
+  font-size: 17px; transition: opacity 0.2s;
+}
+.link-arrow::after { content: '›'; font-size: 22px; transform: translateY(-1px); }
+.link-arrow:hover { opacity: 0.7; }
+
+/* ─────────── TYPOGRAPHY ─────────── */
+.eyebrow {
+  font-size: 14px; font-weight: 600;
+  letter-spacing: 1px; text-transform: uppercase;
+  color: var(--blue); margin-bottom: 14px;
+}
+.eyebrow.light { color: var(--blue-light); }
+.eyebrow.muted { color: var(--grey); }
+
+h1, h2, h3 {
+  letter-spacing: -0.025em;
+  font-weight: 600;
+  color: inherit;
+}
+.h-hero {
+  font-size: 80px; line-height: 1.05; font-weight: 700;
+}
+.h-display {
+  font-size: 64px; line-height: 1.07; font-weight: 700;
+}
+.h-section {
+  font-size: 48px; line-height: 1.1; font-weight: 600;
+}
+.h-card {
+  font-size: 32px; line-height: 1.15; font-weight: 600;
+}
+.lead {
+  font-size: 21px; color: var(--grey2);
+  font-weight: 400; line-height: 1.4;
+  letter-spacing: -0.022em;
+}
+.dark .lead { color: rgba(255,255,255,0.7); }
+
+/* ─────────── SECTION BASE ─────────── */
+.section {
+  padding: 120px 0;
+  text-align: center;
+}
+.section.compact { padding: 80px 0; }
+.section.dark {
+  background: var(--black);
+  color: #f5f5f7;
+}
+.section.light-bg { background: var(--light); }
+
+.section-title { max-width: 900px; margin: 0 auto 18px; }
+.section-lead { max-width: 640px; margin: 0 auto 56px; }
+
+/* ─────────── HERO ─────────── */
+.hero {
+  padding: 56px 0 0;
+  text-align: center;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 6px 16px;
+  border-radius: 980px;
+  font-size: 13px; color: var(--grey2);
+  margin-bottom: 22px;
+}
+.hero-badge-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #30d158;
+  box-shadow: 0 0 8px rgba(48,209,88,0.6);
+}
+.hero h1 {
+  font-size: 80px; line-height: 1.05; font-weight: 700;
+  letter-spacing: -0.025em;
+  max-width: 900px; margin: 0 auto 18px;
+}
+.hero h1 em {
+  font-style: normal;
+  background: linear-gradient(135deg, #1d1d1f 0%, #6e6e73 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-sub {
+  font-size: 24px;
+  color: var(--grey2);
+  font-weight: 400;
+  max-width: 640px;
+  margin: 0 auto 24px;
+  letter-spacing: -0.022em;
+  line-height: 1.4;
+}
+.hero-proof {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: var(--grey2); font-size: 15px;
+  margin-bottom: 32px;
+}
+.hero-ctas {
+  display: flex; gap: 24px; justify-content: center; align-items: center;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+.hero-visual {
+  max-width: 1100px; margin: 0 auto;
+  border-radius: 22px; overflow: hidden;
+  background: var(--light);
+  position: relative;
+}
+.hero-video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #000;
+}
+.hero-video-frame iframe {
+  width: 100%; height: 100%; border: 0;
+}
+.video-overlay {
+  position: absolute; inset: 0;
+  cursor: pointer;
+}
+.video-center-btn {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px; height: 80px;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(20px);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.video-center-btn.visible { opacity: 1; pointer-events: auto; }
+.video-controls-bar {
+  position: absolute; bottom: 14px; right: 14px;
+  display: flex; gap: 8px; z-index: 10;
+}
+.video-ctrl-btn {
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(20px);
+  border: none; cursor: pointer;
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  color: #fff; font-size: 16px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* ─────────── DEVUSHKI SLIDER ─────────── */
+.devushki {
+  padding: 80px 0;
+  background: var(--light);
+}
+.devushki-label {
+  text-align: center; margin-bottom: 28px;
+  font-size: 13px; color: var(--grey2);
+  letter-spacing: 2px; text-transform: uppercase; font-weight: 600;
+}
+.clients-slider {
+  display: flex; gap: 14px;
+  overflow-x: auto;
+  padding: 4px 22px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+}
+.clients-slider::-webkit-scrollbar { display: none; }
+.clients-slider.dragging { cursor: grabbing; }
+.client-card {
+  flex: 0 0 200px;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  scroll-snap-align: start;
+}
+.client-card:hover { transform: translateY(-4px); }
+.client-img {
+  width: 100%; aspect-ratio: 3/4;
+  object-fit: cover;
+}
+.client-info {
+  padding: 14px 16px 16px;
+}
+.client-name {
+  font-size: 16px; font-weight: 600; margin-bottom: 2px;
+}
+.client-ig {
+  font-size: 13px; color: var(--grey);
+}
+
+/* ─────────── ABOUT (STORY) ─────────── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  max-width: 1200px;
+  margin: 60px auto 0;
+}
+.about-card {
+  background: var(--light);
+  border-radius: 28px;
+  padding: 56px 48px;
+  text-align: left;
+}
+.about-card.dark {
+  background: var(--black); color: #f5f5f7;
+}
+.about-card h3 {
+  font-size: 40px; line-height: 1.1; font-weight: 600;
+  margin-bottom: 18px; letter-spacing: -0.015em;
+}
+.about-card p {
+  font-size: 18px; line-height: 1.55; color: var(--grey2);
+  margin-bottom: 16px;
+}
+.about-card.dark p { color: rgba(255,255,255,0.7); }
+.about-card strong { color: var(--black); font-weight: 600; }
+.about-card.dark strong { color: #fff; }
+
+.story-stats {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 14px; margin-top: 56px;
+}
+.story-stat-card {
+  background: var(--light);
+  border-radius: 22px;
+  padding: 40px 32px;
+  text-align: left;
+}
+.story-stat-num {
+  font-size: 80px; font-weight: 700;
+  line-height: 1; letter-spacing: -0.04em;
+  color: var(--black);
+  margin-bottom: 12px;
+}
+.story-stat-lbl {
+  font-size: 15px; color: var(--grey2);
+}
+
+.trainer-gallery {
+  max-width: 1200px; margin: 56px auto 0;
+}
+.trainer-gallery-label {
+  text-align: center; margin-bottom: 32px;
+  font-size: 13px; color: var(--grey2);
+  letter-spacing: 2px; text-transform: uppercase; font-weight: 600;
+}
+.trainer-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.trainer-photo {
+  background: var(--light);
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+}
+.trainer-photo img {
+  width: 100%; aspect-ratio: 3/4;
+  object-fit: cover;
+}
+.trainer-photo .photo-label-overlay {
+  position: absolute; top: 12px; left: 12px;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  padding: 4px 10px;
+  border-radius: 980px;
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.3px;
+}
+.trainer-photo .photo-caption {
+  padding: 14px 18px 18px;
+  font-size: 13px; color: var(--grey2);
+  text-align: left;
+  line-height: 1.5;
+}
+.trainer-after {
+  margin-top: 22px;
+  background: var(--black);
+  color: #fff;
+  border-radius: 28px;
+  padding: 48px;
+  text-align: center;
+}
+.trainer-after-label {
+  font-size: 14px; letter-spacing: 1px; text-transform: uppercase;
+  color: rgba(255,255,255,0.5); margin-bottom: 20px; font-weight: 600;
+}
+.trainer-after img {
+  max-width: 320px; aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 18px;
+  margin: 0 auto 24px;
+}
+.trainer-after-text {
+  font-size: 17px; color: rgba(255,255,255,0.7);
+}
+
+/* ─────────── APPROACH ─────────── */
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  max-width: 1200px; margin: 56px auto 0;
+}
+.approach-card {
+  background: var(--light);
+  border-radius: 22px;
+  padding: 40px 36px;
+  text-align: left;
+}
+.approach-card.full { grid-column: 1 / -1; }
+.approach-card .icon {
+  font-size: 32px; margin-bottom: 16px;
+}
+.approach-card h3 {
+  font-size: 24px; font-weight: 600; margin-bottom: 10px;
+  letter-spacing: -0.015em;
+}
+.approach-card p {
+  font-size: 16px; color: var(--grey2); line-height: 1.55;
+}
+.approach-card em {
+  font-style: italic; color: var(--black);
+}
+
+/* ─────────── CASES (RESULTS) ─────────── */
+.cases-grid {
+  display: flex; flex-direction: column; gap: 22px;
+  max-width: 1200px; margin: 56px auto 0;
+}
+.case-card {
+  background: var(--light);
+  border-radius: 28px;
+  padding: 48px;
+  text-align: left;
+}
+.case-header {
+  display: flex; align-items: center; gap: 18px;
+  margin-bottom: 28px;
+}
+.case-avatar {
+  width: 56px; height: 56px;
+  background: linear-gradient(135deg, #d2d2d7, #aaa);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+.case-meta { flex: 1; }
+.case-name {
+  font-size: 20px; font-weight: 600; letter-spacing: -0.015em;
+}
+.case-period {
+  font-size: 14px; color: var(--grey); margin-top: 2px;
+}
+.case-badge {
+  background: var(--black); color: #fff;
+  font-size: 12px; font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 980px;
+  letter-spacing: 0.3px;
+}
+.case-request {
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+}
+.case-request-label {
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 1px; text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+.case-request p {
+  font-size: 16px; color: var(--grey2); line-height: 1.6;
+}
+.case-request strong { color: var(--black); font-weight: 600; }
+.case-params {
+  display: flex; gap: 24px; margin-bottom: 20px;
+  padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.case-param-row {
+  font-size: 14px; color: var(--grey2);
+}
+.case-param-row strong {
+  color: var(--black); font-weight: 600;
+}
+.case-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.case-stat {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px 14px;
+  text-align: center;
+}
+.case-stat-label {
+  font-size: 12px; color: var(--grey); margin-bottom: 4px;
+}
+.case-stat-val {
+  font-size: 20px; font-weight: 600; color: var(--black);
+  letter-spacing: -0.015em;
+}
+.case-quote {
+  background: var(--black); color: #fff;
+  border-radius: 18px;
+  padding: 28px 32px;
+  margin-bottom: 24px;
+}
+.case-quote-text {
+  font-size: 19px; font-style: italic;
+  line-height: 1.5; margin-bottom: 12px;
+  letter-spacing: -0.015em;
+}
+.case-quote-author {
+  font-size: 14px; color: rgba(255,255,255,0.5);
+}
+.case-insight {
+  background: rgba(0,113,227,0.04);
+  border: 1px solid rgba(0,113,227,0.15);
+  border-radius: 18px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+}
+.case-insight-title {
+  font-size: 16px; font-weight: 600; color: var(--blue);
+  margin-bottom: 8px;
+}
+.case-insight p {
+  font-size: 15px; color: var(--grey2); line-height: 1.6;
+}
+.case-insight strong { color: var(--black); font-weight: 600; }
+.case-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.case-photo {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+}
+.case-photo .photo-label-top {
+  padding: 14px 18px 8px;
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.3px;
+  color: var(--grey2);
+}
+.case-photo img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+.case-photo.tall img { aspect-ratio: 9/16; }
+.case-video {
+  margin-bottom: 24px;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+}
+.case-video-label {
+  padding: 14px 18px 8px;
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.3px;
+  color: var(--grey2);
+}
+.case-video iframe {
+  width: 100%; aspect-ratio: 16/9; border: 0;
+}
+
+/* ─────────── FEARS / TESTIMONIALS ─────────── */
+.fears-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  max-width: 1200px; margin: 56px auto 0;
+}
+.fear-card {
+  background: var(--light);
+  border-radius: 22px;
+  padding: 36px 32px;
+  text-align: left;
+  position: relative;
+}
+.fear-mark {
+  position: absolute; top: 24px; right: 28px;
+  font-size: 64px; line-height: 1;
+  color: rgba(0,113,227,0.15);
+  font-family: Georgia, serif;
+}
+.fear-tag {
+  display: inline-block;
+  background: #fff;
+  color: var(--blue);
+  font-size: 12px; font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 980px;
+  margin-bottom: 18px;
+  letter-spacing: 0.3px;
+}
+.fear-text {
+  font-size: 15px; color: var(--grey2);
+  line-height: 1.6; margin-bottom: 20px;
+}
+.fear-text strong { color: var(--black); font-weight: 600; }
+.fear-author {
+  display: flex; align-items: center; gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+.fear-avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 600; font-size: 16px;
+  flex-shrink: 0;
+}
+.fear-name {
+  font-size: 14px; font-weight: 600;
+}
+.fear-meta {
+  font-size: 12px; color: var(--grey);
+}
+
+/* ─────────── SERVICES ─────────── */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1200px; margin: 56px auto 0;
+}
+.service-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 48px 40px;
+  text-align: left;
+  display: flex; flex-direction: column;
+  position: relative;
+}
+.service-card.featured {
+  background: var(--black);
+  color: #f5f5f7;
+  border: none;
+}
+.service-badge {
+  position: absolute;
+  top: 20px; right: 24px;
+  background: var(--blue);
+  color: #fff;
+  font-size: 11px; font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 980px;
+  letter-spacing: 0.3px;
+}
+.service-icon {
+  font-size: 36px; margin-bottom: 20px;
+}
+.service-title {
+  font-size: 26px; font-weight: 600;
+  line-height: 1.15; margin-bottom: 8px;
+  letter-spacing: -0.015em;
+}
+.service-sub {
+  font-size: 15px; color: var(--grey2);
+  margin-bottom: 28px;
+}
+.service-card.featured .service-sub { color: rgba(255,255,255,0.6); }
+.service-features {
+  margin-bottom: auto; padding-bottom: 32px;
+}
+.service-feature {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+  color: var(--grey2);
+  line-height: 1.5;
+  display: flex; gap: 10px; align-items: flex-start;
+}
+.service-card.featured .service-feature {
+  border-color: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.75);
+}
+.service-feature::before {
+  content: '';
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--blue);
+  margin-top: 9px;
+  flex-shrink: 0;
+}
+.service-card.featured .service-feature::before { background: var(--blue-light); }
+.service-feature:last-child { border-bottom: none; }
+.service-price {
+  font-size: 32px; font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+.service-price-sub {
+  font-size: 13px; color: var(--grey);
+}
+.service-card.featured .service-price-sub { color: rgba(255,255,255,0.5); }
+.service-price-rub {
+  font-size: 12px; color: var(--grey);
+  margin-top: 6px;
+}
+.service-card.featured .service-price-rub { color: rgba(255,255,255,0.35); }
+.service-cta {
+  margin-top: 24px;
+}
+.service-card.featured .btn { background: #fff; color: var(--black); }
+.service-card.featured .btn:hover { background: var(--light); }
+
+/* ─────────── BIG QUOTE ─────────── */
+.big-quote {
+  padding: 160px 0;
+  background: var(--black);
+  color: #f5f5f7;
+  text-align: center;
+}
+.big-quote-text {
+  font-size: 56px; line-height: 1.1; font-weight: 600;
+  letter-spacing: -0.02em;
+  max-width: 900px; margin: 0 auto 28px;
+}
+.big-quote-text em {
+  font-style: normal; color: var(--blue-light);
+}
+.big-quote-author {
+  font-size: 17px; color: rgba(255,255,255,0.5);
+}
+
+/* ─────────── CONSULTATION ─────────── */
+.consult-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 22px;
+  max-width: 1200px; margin: 56px auto 0;
+}
+.consult-steps {
+  display: flex; flex-direction: column; gap: 14px;
+}
+.consult-step {
+  background: var(--light);
+  border-radius: 22px;
+  padding: 32px 36px;
+  text-align: left;
+  display: flex; gap: 24px;
+}
+.consult-step-num {
+  font-size: 40px; font-weight: 700;
+  color: var(--blue);
+  line-height: 1;
+  letter-spacing: -0.025em;
+  flex-shrink: 0;
+}
+.consult-step-title {
+  font-size: 18px; font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: -0.015em;
+}
+.consult-step-text {
+  font-size: 15px; color: var(--grey2); line-height: 1.55;
+}
+.consult-cta-card {
+  background: var(--black);
+  color: #f5f5f7;
+  border-radius: 28px;
+  padding: 44px 36px;
+  text-align: left;
+  display: flex; flex-direction: column;
+}
+.consult-cta-card .ic {
+  font-size: 36px; margin-bottom: 16px;
+}
+.consult-cta-card h3 {
+  font-size: 28px; font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: -0.015em;
+}
+.consult-cta-card p {
+  font-size: 15px; color: rgba(255,255,255,0.7);
+  margin-bottom: 24px;
+  line-height: 1.55;
+}
+.consult-points {
+  margin-bottom: 28px;
+}
+.consult-point {
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  padding: 8px 0;
+  display: flex; align-items: center; gap: 10px;
+}
+.consult-point::before {
+  content: '✓';
+  color: var(--blue-light);
+  font-weight: 600;
+}
+.consult-cta-card .btn { width: 100%; justify-content: center; }
+.consult-cta-card .btn.dark-mode { background: #fff; color: var(--black); }
+.consult-cta-card .btn.outline-mode {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+  margin-top: 10px;
+}
+.consult-cta-card .btn.quiz-mode {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.7);
+  margin-top: 10px;
+}
+.consult-cta-divider {
+  display: flex; align-items: center; gap: 12px;
+  margin: 18px 0 4px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+}
+.consult-cta-divider::before, .consult-cta-divider::after {
+  content: ''; flex: 1; height: 1px;
+  background: rgba(255,255,255,0.1);
+}
+
+/* ─────────── FINAL CTA ─────────── */
+.final-cta {
+  padding: 160px 0;
+  background: var(--light);
+  text-align: center;
+}
+.final-cta h2 {
+  font-size: 80px; line-height: 1.05; font-weight: 700;
+  letter-spacing: -0.025em;
+  max-width: 900px; margin: 0 auto 18px;
+}
+.final-cta h2 em {
+  font-style: normal;
+  background: linear-gradient(135deg, #1d1d1f 0%, #6e6e73 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.final-cta p {
+  font-size: 21px;
+  color: var(--grey2);
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.4;
+}
+.final-cta-ctas {
+  display: flex; gap: 14px; justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ─────────── FOOTER ─────────── */
+.site-footer {
+  background: var(--light);
+  padding: 40px 0;
+  border-top: 1px solid var(--line);
+}
+.site-footer .container {
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 16px;
+}
+.site-footer-text {
+  font-size: 12px; color: var(--grey);
+}
+.site-footer-links {
+  display: flex; gap: 24px;
+}
+.site-footer-links a {
+  font-size: 12px; color: var(--grey2);
+}
+.site-footer-links a:hover { color: var(--black); }
+
+/* ─────────── SEO BLOCK ─────────── */
+.seo-block {
+  padding: 60px 0;
+  background: var(--light);
+  border-top: 1px solid var(--line);
+}
+.seo-block h3 {
+  font-size: 20px; font-weight: 600; margin-bottom: 14px;
+  letter-spacing: -0.015em;
+}
+.seo-block p {
+  font-size: 14px; color: var(--grey2);
+  line-height: 1.7; max-width: 640px;
+}
+
+/* ─────────── RESPONSIVE ─────────── */
+@media (max-width: 1024px) {
+  .hero h1, .final-cta h2 { font-size: 56px; }
+  .h-display, .h-hero { font-size: 56px; }
+  .h-section { font-size: 36px; }
+  .big-quote-text { font-size: 36px; }
+  .about-grid, .services-grid, .consult-grid, .fears-grid { grid-template-columns: 1fr; }
+  .trainer-gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .case-stats { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .nav-links { display: none; }
+  .hero h1, .final-cta h2 { font-size: 40px; }
+  .h-display { font-size: 40px; }
+  .h-section { font-size: 28px; }
+  .hero-sub, .lead { font-size: 17px; }
+  .big-quote-text { font-size: 26px; }
+  .section { padding: 80px 0; }
+  .big-quote { padding: 80px 0; }
+  .case-card, .about-card, .approach-card, .consult-step, .consult-cta-card { padding: 28px 24px; }
+  .service-card { padding: 32px 28px; }
+  .case-photos { grid-template-columns: 1fr; }
+  .case-stats { grid-template-columns: repeat(2, 1fr); }
+  .story-stat-num { font-size: 56px; }
+}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5Q65D2F"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5Q65D2F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
+<!-- ════════════════ NAV ════════════════ -->
 <nav class="site-nav">
-  <div class="container">
-    <div class="nav-inner">
-      <a href="#hero" class="nav-logo">Даня <span>keeb</span></a>
-      <div class="nav-links">
-        <a href="#hero" class="active">Главная</a>
-        <a href="#about" >Обо мне</a>
-        <a href="#results" >Результаты</a>
-        <a href="#services" >Услуги</a>
-        <a href="#contact" class="nav-cta ">Записаться</a>
-      </div>
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">Даня <span>keeb</span></a>
+    <div class="nav-links">
+      <a href="#about">Обо мне</a>
+      <a href="#results">Результаты</a>
+      <a href="#services">Программы</a>
+      <a href="#contact" class="nav-cta">Записаться</a>
     </div>
   </div>
 </nav>
 
-<style>
-html { scroll-behavior: smooth; overflow-x: hidden; }
-body { overflow-x: hidden; }
-section[id] { scroll-margin-top: 68px; }
-* { box-sizing: border-box; }
-img, video, iframe { max-width: 100%; }
-</style>
-
+<!-- ════════════════ HERO ════════════════ -->
 <section class="hero" id="hero">
   <div class="container">
-    <div class="hero-grid">
-      <div class="hero-content">
-        <div class="hero-badge">
+    <div class="hero-badge">
       <div class="hero-badge-dot"></div>
-      <span class="hero-badge-text">Онлайн-тренер · Работаю по всему миру</span>
+      <span>Онлайн-тренер · Работаю по всему миру</span>
     </div>
-
     <h1>Ходишь в зал,<br>но чувствуешь, что<br><em>топчешься на месте?</em></h1>
-
-    <p class="hero-sub">
-      Работаю с девушками, которые хотят выглядеть лучше и кайфовать от процесса — без жёсткости и насилия над собой.
-    </p>
-
-    <div class="hero-stat">
-      <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
-        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#C9A96E"/>
-      </svg>
-      Реальный кейс: −17 см и −4 кг за месяц на 2000 ккал
+    <p class="hero-sub">Работаю с девушками, которые хотят выглядеть лучше и кайфовать от процесса — без жёсткости и насилия над собой.</p>
+    <div class="hero-proof">
+      <span>★</span>
+      <span>Реальный кейс: −17 см и −4 кг за месяц на 2000 ккал</span>
     </div>
-
-    <div class="btn-row">
-      <a href="https://t.me/danikeeb" class="btn" target="_blank">Записаться на тренировку</a>
-      <a href="https://wa.me/905369307790" class="btn btn-outline" target="_blank">Написать в WhatsApp</a>
+    <div class="hero-ctas">
+      <a href="https://t.me/danikeeb" class="btn large" target="_blank">Записаться на тренировку</a>
+      <a href="https://wa.me/905369307790" class="link-arrow" target="_blank">Написать в WhatsApp</a>
     </div>
+    <div class="hero-visual">
+      <div class="hero-video-frame">
+        <iframe id="ytPlayer"
+          src="https://www.youtube.com/embed/vghcAdvrKDI?autoplay=1&mute=1&loop=1&playlist=vghcAdvrKDI&controls=0&playsinline=1&rel=0&modestbranding=1&enablejsapi=1"
+          frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div class="video-overlay" id="videoOverlay"></div>
+        <div class="video-center-btn" id="videoCenterBtn">
+          <svg id="playIcon" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pauseIcon" width="28" height="28" viewBox="0 0 24 24" fill="white" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </div>
+        <div class="video-controls-bar">
+          <button class="video-ctrl-btn" id="unmuteBtn" title="Звук">🔇</button>
+          <button class="video-ctrl-btn" id="restartBtn" title="Сначала">↩</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <a href="https://www.instagram.com/dani.keeb?igsh=MTgxZGV3NHQwajI2&utm_source=qr"
-       class="ig-preview-card" target="_blank" rel="noopener">
-      <div class="ig-preview-avatar">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="white" stroke="none"/></svg>
-      </div>
-      <div class="ig-preview-body">
-        <div class="ig-preview-name">Даня keeb · Тренер</div>
-        <div class="ig-preview-handle">@dani.keeb</div>
-      </div>
-      <div class="ig-preview-follow">Подписаться →</div>
+<!-- ════════════════ DEVUSHKI SLIDER ════════════════ -->
+<section class="devushki">
+  <div class="devushki-label">Девушки, которые уже занимаются</div>
+  <div class="clients-slider" id="clientsSlider">
+    <a href="https://www.instagram.com/maru_nich" class="client-card" target="_blank" rel="noopener">
+      <img src="girls/girl_1.jpg" alt="Маша @maru_nich" class="client-img">
+      <div class="client-info"><div class="client-name">Маша</div><div class="client-ig">@maru_nich</div></div>
     </a>
-
-      </div><!-- /hero-content -->
-            <div class="hero-visual">
-
-        <!-- Вертикальное видео (YouTube) -->
-        <div class="hero-video-frame">
-          <iframe
-            id="ytPlayer"
-            class="hero-video-el"
-            src="https://www.youtube.com/embed/vghcAdvrKDI?autoplay=1&mute=1&loop=1&playlist=vghcAdvrKDI&controls=0&playsinline=1&rel=0&modestbranding=1&enablejsapi=1"
-            frameborder="0"
-            allow="autoplay; encrypted-media"
-            allowfullscreen
-          ></iframe>
-          <!-- Оверлей для кликов -->
-          <div class="video-overlay" id="videoOverlay"></div>
-          <!-- Центральная кнопка паузы -->
-          <div class="video-center-btn" id="videoCenterBtn">
-            <svg id="playIcon" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-            <svg id="pauseIcon" width="28" height="28" viewBox="0 0 24 24" fill="white" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-          </div>
-          <!-- Нижняя панель -->
-          <div class="video-controls-bar">
-            <button class="video-ctrl-btn" id="unmuteBtn" title="Звук">🔇</button>
-            <button class="video-ctrl-btn" id="restartBtn" title="Сначала">↩</button>
-          </div>
-        </div>
-
-        <!-- Слайдшоу клиенток — PLACEHOLDER, перемещено ниже -->
-        <div class="hero-clients-wrap" style="display:none">
-          <div class="hero-clients-slider">
-            <div class="clients-track" id="clientsTrack">
-
-              <a href="https://www.instagram.com/maru_nich" class="client-card" target="_blank" rel="noopener">
-                <img src="girls/girl_1.jpg" alt="Маша @maru_nich" class="client-img">
-                <div class="client-info">
-                  <div class="client-name">Маша</div>
-                  <div class="client-ig">@maru_nich</div>
-                </div>
-              </a>
-
-              <a href="https://www.instagram.com/painkiller_404" class="client-card" target="_blank" rel="noopener">
-                <img src="girls/girl_2.jpg" alt="Александра @painkiller_404" class="client-img">
-                <div class="client-info">
-                  <div class="client-name">Александра</div>
-                  <div class="client-ig">@painkiller_404</div>
-                </div>
-              </a>
-
-              <a href="https://www.instagram.com/nina13nina" class="client-card" target="_blank" rel="noopener">
-                <img src="girls/girl_3.jpg" alt="Нина @nina13nina" class="client-img">
-                <div class="client-info">
-                  <div class="client-name">Нина</div>
-                  <div class="client-ig">@nina13nina</div>
-                </div>
-              </a>
-
-              <a href="https://www.instagram.com/neegoduykoo" class="client-card" target="_blank" rel="noopener">
-                <img src="girls/girl_4.jpg" alt="Ксюша @neegoduykoo" class="client-img">
-                <div class="client-info">
-                  <div class="client-name">Ксюша</div>
-                  <div class="client-ig">@neegoduykoo</div>
-                </div>
-              </a>
-
-              <a href="https://www.instagram.com/raleks__" class="client-card" target="_blank" rel="noopener">
-                <img src="girls/girl_5.jpg" alt="Саша @raleks__" class="client-img">
-                <div class="client-info">
-                  <div class="client-name">Саша</div>
-                  <div class="client-ig">@raleks__</div>
-                </div>
-              </a>
-
-              <a href="https://www.instagram.com/numashaaaa" class="client-card" target="_blank" rel="noopener">
-                <img src="girls/girl_6.jpg" alt="Мария @numashaaaa" class="client-img">
-                <div class="client-info">
-                  <div class="client-name">Мария</div>
-                  <div class="client-ig">@numashaaaa</div>
-                </div>
-              </a>
-
-              <a href="https://www.instagram.com/natashhine" class="client-card" target="_blank" rel="noopener">
-                <img src="girls/girl_7.jpg" alt="Наташа @natashhine" class="client-img">
-                <div class="client-info">
-                  <div class="client-name">Наташа</div>
-                  <div class="client-ig">@natashhine</div>
-                </div>
-              </a>
-
-              <a href="https://www.instagram.com/polonaamy" class="client-card" target="_blank" rel="noopener">
-                <img src="girls/girl_8.jpg" alt="Лера @polonaamy" class="client-img">
-                <div class="client-info">
-                  <div class="client-name">Лера</div>
-                  <div class="client-ig">@polonaamy</div>
-                </div>
-              </a>
-
-              <a href="https://www.instagram.com/marylalotta" class="client-card" target="_blank" rel="noopener">
-                <img src="girls/girl_9.jpg" alt="Маша @marylalotta" class="client-img">
-                <div class="client-info">
-                  <div class="client-name">Маша</div>
-                  <div class="client-ig">@marylalotta</div>
-                </div>
-              </a>
-
-              <a href="https://www.instagram.com/diana.sajin" class="client-card" target="_blank" rel="noopener">
-                <img src="girls/girl_10.jpg" alt="Диана @diana.sajin" class="client-img">
-                <div class="client-info">
-                  <div class="client-name">Диана</div>
-                  <div class="client-ig">@diana.sajin</div>
-                </div>
-              </a>
-
-
-            </div>
-          </div>
-        </div>
-
-      </div><!-- /hero-visual -->
-    </div><!-- /hero-grid -->
+    <a href="https://www.instagram.com/painkiller_404" class="client-card" target="_blank" rel="noopener">
+      <img src="girls/girl_2.jpg" alt="Александра @painkiller_404" class="client-img">
+      <div class="client-info"><div class="client-name">Александра</div><div class="client-ig">@painkiller_404</div></div>
+    </a>
+    <a href="https://www.instagram.com/nina13nina" class="client-card" target="_blank" rel="noopener">
+      <img src="girls/girl_3.jpg" alt="Нина @nina13nina" class="client-img">
+      <div class="client-info"><div class="client-name">Нина</div><div class="client-ig">@nina13nina</div></div>
+    </a>
+    <a href="https://www.instagram.com/neegoduykoo" class="client-card" target="_blank" rel="noopener">
+      <img src="girls/girl_4.jpg" alt="Ксюша @neegoduykoo" class="client-img">
+      <div class="client-info"><div class="client-name">Ксюша</div><div class="client-ig">@neegoduykoo</div></div>
+    </a>
+    <a href="https://www.instagram.com/raleks__" class="client-card" target="_blank" rel="noopener">
+      <img src="girls/girl_5.jpg" alt="Саша @raleks__" class="client-img">
+      <div class="client-info"><div class="client-name">Саша</div><div class="client-ig">@raleks__</div></div>
+    </a>
+    <a href="https://www.instagram.com/numashaaaa" class="client-card" target="_blank" rel="noopener">
+      <img src="girls/girl_6.jpg" alt="Мария @numashaaaa" class="client-img">
+      <div class="client-info"><div class="client-name">Мария</div><div class="client-ig">@numashaaaa</div></div>
+    </a>
+    <a href="https://www.instagram.com/natashhine" class="client-card" target="_blank" rel="noopener">
+      <img src="girls/girl_7.jpg" alt="Наташа @natashhine" class="client-img">
+      <div class="client-info"><div class="client-name">Наташа</div><div class="client-ig">@natashhine</div></div>
+    </a>
+    <a href="https://www.instagram.com/polonaamy" class="client-card" target="_blank" rel="noopener">
+      <img src="girls/girl_8.jpg" alt="Лера @polonaamy" class="client-img">
+      <div class="client-info"><div class="client-name">Лера</div><div class="client-ig">@polonaamy</div></div>
+    </a>
+    <a href="https://www.instagram.com/marylalotta" class="client-card" target="_blank" rel="noopener">
+      <img src="girls/girl_9.jpg" alt="Маша @marylalotta" class="client-img">
+      <div class="client-info"><div class="client-name">Маша</div><div class="client-ig">@marylalotta</div></div>
+    </a>
+    <a href="https://www.instagram.com/diana.sajin" class="client-card" target="_blank" rel="noopener">
+      <img src="girls/girl_10.jpg" alt="Диана @diana.sajin" class="client-img">
+      <div class="client-info"><div class="client-name">Диана</div><div class="client-ig">@diana.sajin</div></div>
+    </a>
   </div>
 </section>
 
-<!-- Слайдшоу клиенток -->
-<section style="background:var(--bg2); padding: 32px 0 40px;">
+<!-- ════════════════ ABOUT / STORY ════════════════ -->
+<section class="section" id="about">
   <div class="container">
-    <div class="hero-clients-wrap">
-      <div class="hero-clients-label">
-        <span>Девушки, которые уже занимаются</span>
+    <div class="eyebrow">Обо мне</div>
+    <h2 class="h-display section-title">Я знаю это <em>изнутри</em>.</h2>
+    <p class="lead section-lead">В 17 лет я весил 72 кг при росте 190 и стеснялся себя настолько, что даже летом надевал тёплые вещи. Спорт был — результата не было.</p>
+
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>Я делал всё «правильно».<br>И всё было неправильно.</h3>
+        <p>5 лет борьбы, регби, постоянные тренировки. Казалось — тело должно меняться. Не менялось.</p>
+        <p>Ответ оказался простым и обидным: <strong>я тренировался без системы и без цели.</strong> Просто «ходил на спорт». Никто не выстраивал моё тело под мой запрос — потому что и запроса не было. Был только стыд.</p>
+        <p>Усилия без системы — это бег по кругу. Можно годами быть в зале и не сдвинуться с места. Я это знаю на себе.</p>
       </div>
-      <div class="hero-clients-slider">
-        <div class="clients-track">
-          <a href="https://www.instagram.com/maru_nich" class="client-card" target="_blank" rel="noopener">
-            <img src="girls/girl_1.jpg" alt="Маша @maru_nich" class="client-img">
-            <div class="client-info"><div class="client-name">Маша</div><div class="client-ig">@maru_nich</div></div>
-          </a>
-          <a href="https://www.instagram.com/painkiller_404" class="client-card" target="_blank" rel="noopener">
-            <img src="girls/girl_2.jpg" alt="Александра @painkiller_404" class="client-img">
-            <div class="client-info"><div class="client-name">Александра</div><div class="client-ig">@painkiller_404</div></div>
-          </a>
-          <a href="https://www.instagram.com/nina13nina" class="client-card" target="_blank" rel="noopener">
-            <img src="girls/girl_3.jpg" alt="Нина @nina13nina" class="client-img">
-            <div class="client-info"><div class="client-name">Нина</div><div class="client-ig">@nina13nina</div></div>
-          </a>
-          <a href="https://www.instagram.com/neegoduykoo" class="client-card" target="_blank" rel="noopener">
-            <img src="girls/girl_4.jpg" alt="Ксюша @neegoduykoo" class="client-img">
-            <div class="client-info"><div class="client-name">Ксюша</div><div class="client-ig">@neegoduykoo</div></div>
-          </a>
-          <a href="https://www.instagram.com/raleks__" class="client-card" target="_blank" rel="noopener">
-            <img src="girls/girl_5.jpg" alt="Саша @raleks__" class="client-img">
-            <div class="client-info"><div class="client-name">Саша</div><div class="client-ig">@raleks__</div></div>
-          </a>
-          <a href="https://www.instagram.com/numashaaaa" class="client-card" target="_blank" rel="noopener">
-            <img src="girls/girl_6.jpg" alt="Мария @numashaaaa" class="client-img">
-            <div class="client-info"><div class="client-name">Мария</div><div class="client-ig">@numashaaaa</div></div>
-          </a>
-          <a href="https://www.instagram.com/natashhine" class="client-card" target="_blank" rel="noopener">
-            <img src="girls/girl_7.jpg" alt="Наташа @natashhine" class="client-img">
-            <div class="client-info"><div class="client-name">Наташа</div><div class="client-ig">@natashhine</div></div>
-          </a>
-          <a href="https://www.instagram.com/polonaamy" class="client-card" target="_blank" rel="noopener">
-            <img src="girls/girl_8.jpg" alt="Лера @polonaamy" class="client-img">
-            <div class="client-info"><div class="client-name">Лера</div><div class="client-ig">@polonaamy</div></div>
-          </a>
-          <a href="https://www.instagram.com/marylalotta" class="client-card" target="_blank" rel="noopener">
-            <img src="girls/girl_9.jpg" alt="Маша @marylalotta" class="client-img">
-            <div class="client-info"><div class="client-name">Маша</div><div class="client-ig">@marylalotta</div></div>
-          </a>
-          <a href="https://www.instagram.com/diana.sajin" class="client-card" target="_blank" rel="noopener">
-            <img src="girls/girl_10.jpg" alt="Диана @diana.sajin" class="client-img">
-            <div class="client-info"><div class="client-name">Диана</div><div class="client-ig">@diana.sajin</div></div>
-          </a>
-        </div>
+      <div class="about-card dark">
+        <h3>Сентябрь 2017.<br>Всё начало меняться.</h3>
+        <p>Я пришёл в зал по-настоящему. Не тренироваться — разобраться: что делаю, зачем, куда это ведёт.</p>
+        <p>К 26 годам — стабильные <strong>100 кг качественной мышечной массы</strong>. Йога, бег, калистеника. Спорт стал частью жизни, а не наказанием.</p>
+        <p>Но самое главное произошло не с телом — <strong>а в голове</strong>. Ушёл стыд. Появилась уверенность, которую раньше я даже не мог себе представить.</p>
       </div>
     </div>
-  </div>
-</section>
 
-<section class="story" id="about">
-  <div class="container">
-    <div class="story-layout">
-      <div class="story-col-left">
-    <div class="tag">Обо мне</div>
-    <h2>Я знаю это <em class="gold">изнутри</em></h2>
-
-
-    <div class="story-body">
-      <p>В 17 лет я уже был спортивным — 5 лет борьбы, полгода полупрофессионального регби. Я пахал. Казалось, тело должно выглядеть соответственно.</p>
-      <p>Но нет.</p>
-      <p>При росте 190 я весил 72 кг и стеснялся себя настолько, что <strong>даже летом надевал тёплые вещи</strong> — лишь бы не выходить в футболке рядом с девушками. Стыд. Каждый день.</p>
-      <p>Я долго не понимал, в чём дело. Тренировался же. Выкладывался. Почему результата нет?</p>
-      <p>Ответ оказался простым и обидным: <strong>я тренировался без системы и без цели.</strong> Просто "ходил на спорт". Делал то, что говорил тренер по борьбе, бежал то, что говорил тренер по регби. Никто не выстраивал моё тело под <em>мой</em> запрос — потому что у меня и запроса-то сформулированного не было. Был только стыд и смутное "хочу по-другому".</p>
-      <p>Усилия без системы — это бег по кругу. Можно годами быть в зале и не сдвинуться с места. Я это знаю на себе.</p>
-      <p>Сентябрь 2017 — я пришёл в зал по-настоящему. Не просто тренироваться, а разобраться: что я делаю, зачем, и куда это ведёт. Появилась система. Появилась цель. И тело начало меняться.</p>
-      <p>К 26 годам — стабильные <strong>100 кг качественной мышечной массы</strong>. Йога, бег, калистеника. Спорт стал частью жизни, а не наказанием за то, что я "не такой".</p>
-      <p><strong>Но самое главное произошло не с телом — а в голове.</strong></p>
-      <p>Ушёл стыд. Появилась уверенность, которую раньше я даже не мог себе представить. Я перестал прятаться — за одеждой, за позой, за чужими ожиданиями. Изменилось то, как я говорю, как захожу в комнату, как смотрю на себя в зеркале. Тело — это была только дверь. За ней оказался совсем другой человек.</p>
-      <p>Именно поэтому я понимаю каждую, кто приходит ко мне. Я был там. Я знаю, каково это — пахать и не видеть результата, и каково это — наконец увидеть в зеркале того, кем ты всегда себя чувствовал внутри. Я знаю, что меняет всё: <strong>не больше усилий, а правильная система под твою цель.</strong></p>
-    </div><!-- /story-body -->
-      </div><!-- /story-col-left -->
-      <div class="story-col-right">
-    <div class="story-stat-row">
+    <div class="story-stats" style="max-width:600px;margin:22px auto 0;">
       <div class="story-stat-card">
-        <div class="num">72</div>
-        <div class="lbl">кг — было (рост 185–190)</div>
+        <div class="story-stat-num">72</div>
+        <div class="story-stat-lbl">кг — было (рост 185–190)</div>
       </div>
       <div class="story-stat-card">
-        <div class="num">100</div>
-        <div class="lbl">кг — стало (чистая масса)</div>
+        <div class="story-stat-num">100</div>
+        <div class="story-stat-lbl">кг — стало (чистая масса)</div>
       </div>
-    </div>    <!-- Галерея фото тренера -->
+    </div>
+
     <div class="trainer-gallery">
-      <div class="trainer-gallery-label">Мой путь</div>
+      <div class="trainer-gallery-label">Мой путь · хроника</div>
       <div class="trainer-gallery-grid">
-        <div class="trainer-photo-wrap">
-          <div class="photo-box" style="aspect-ratio:3/4">
-            <img src="img/about_1.jpg" alt="17 лет — борьба и регби" />
-            <div class="photo-label">17 лет</div>
-          </div>
-          <div class="trainer-photo-caption">5 лет борьбы + регби — а тело не менялось</div>
+        <div class="trainer-photo">
+          <img src="img/about_1.jpg" alt="17 лет — борьба и регби">
+          <div class="photo-label-overlay">17 лет</div>
+          <div class="photo-caption">5 лет борьбы + регби — тело не менялось</div>
         </div>
-        <div class="trainer-photo-wrap">
-          <div class="photo-box" style="aspect-ratio:3/4">
-            <img src="img/about_2.jpg" alt="16-17 лет" />
-            <div class="photo-label">~17 лет</div>
-          </div>
-          <div class="trainer-photo-caption">Стеснялся даже летом надеть футболку</div>
+        <div class="trainer-photo">
+          <img src="img/about_2.jpg" alt="16-17 лет">
+          <div class="photo-label-overlay">~17 лет</div>
+          <div class="photo-caption">Стеснялся даже летом надеть футболку</div>
         </div>
-        <div class="trainer-photo-wrap">
-          <div class="photo-box" style="aspect-ratio:3/4">
-            <img src="img/about_3.jpg" alt="Сентябрь 2017 — старт" />
-            <div class="photo-label">Сент. 2017</div>
-          </div>
-          <div class="trainer-photo-caption">Старт в зале — сентябрь 2017</div>
+        <div class="trainer-photo">
+          <img src="img/about_3.jpg" alt="Сентябрь 2017">
+          <div class="photo-label-overlay">Сент. 2017</div>
+          <div class="photo-caption">Старт в зале с системой</div>
         </div>
-        <div class="trainer-photo-wrap">
-          <div class="photo-box" style="aspect-ratio:3/4">
-            <img src="img/about_4.jpg" alt="Апрель 2018" />
-            <div class="photo-label">Апр. 2018</div>
-          </div>
-          <div class="trainer-photo-caption">Через год — уже другой человек</div>
+        <div class="trainer-photo">
+          <img src="img/about_4.jpg" alt="Апрель 2018">
+          <div class="photo-label-overlay">Апр. 2018</div>
+          <div class="photo-caption">Через год — уже другой человек</div>
         </div>
       </div>
-
-      <!-- Фото после -->
-      <div class="trainer-after-wrap">
+      <div class="trainer-after">
         <div class="trainer-after-label">Результат · 25 лет · 100 кг</div>
-        <div class="photo-box trainer-after-photo">
-          <img src="img/about_5.jpg" alt="25 лет — 100 кг" />
-          <div class="photo-label">25 лет</div>
-        </div>
+        <img src="img/about_5.jpg" alt="25 лет, 100 кг">
         <div class="trainer-after-text">Йога · Бег · Калистеника · 100 кг чистой массы</div>
       </div>
-
     </div>
-      </div><!-- /story-col-right -->
-    </div><!-- /story-layout -->
   </div>
 </section>
-<section class="approach">
+
+<!-- ════════════════ APPROACH ════════════════ -->
+<section class="section light-bg">
   <div class="container">
-    <div class="tag">Подход</div>
-    <h2>Не как <em class="gold">все</em></h2>
+    <div class="eyebrow">Подход</div>
+    <h2 class="h-display section-title">Не как все.</h2>
+    <p class="lead section-lead">Пять принципов, по которым я работаю — каждый из них меняет результат.</p>
 
     <div class="approach-grid">
       <div class="approach-card">
@@ -434,534 +1174,415 @@ img, video, iframe { max-width: 100%; }
       <div class="approach-card full">
         <div class="icon">✨</div>
         <h3>Атмосфера, в которую хочется возвращаться</h3>
-        <p>Со мной не страшно, не стыдно, не надо притворяться, что всё понимаешь. Многие клиентки говорят: <em>"впервые не боюсь зала"</em>. Именно это и меняет всё.</p>
+        <p>Со мной не страшно, не стыдно, не надо притворяться, что всё понимаешь. Многие говорят: <em>«впервые не боюсь зала»</em>. Именно это меняет всё.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="cases" id="results">
+<!-- ════════════════ BIG QUOTE ════════════════ -->
+<section class="big-quote">
   <div class="container">
-    <div class="tag">Результаты</div>
-    <h2>Цифры говорят<br><em class="gold">сами за себя</em></h2>
+    <div class="big-quote-text">«За 12 недель я перестала<br>оправдываться<br><em>за своё тело.»</em></div>
+    <div class="big-quote-author">— Полина, после месяца работы</div>
+  </div>
+</section>
+
+<!-- ════════════════ CASES / RESULTS ════════════════ -->
+<section class="section" id="results">
+  <div class="container">
+    <div class="eyebrow">Результаты</div>
+    <h2 class="h-display section-title">Цифры говорят сами за себя.</h2>
+    <p class="lead section-lead">Четыре истории. Реальные тела, реальные жизни, реальные изменения.</p>
 
     <div class="cases-grid">
-    <!-- Case 1 — Дора -->
-    <div class="case-card">
-      <div class="case-header">
-        <div class="case-avatar">👩</div>
-        <div class="case-meta">
-          <div class="case-name">Дора · 18 лет</div>
-          <div class="case-period">Октябрь — Декабрь 2024 · 2.5 месяца</div>
+
+      <!-- Case 1 — Дора -->
+      <div class="case-card">
+        <div class="case-header">
+          <div class="case-avatar">👩</div>
+          <div class="case-meta">
+            <div class="case-name">Дора · 18 лет</div>
+            <div class="case-period">Октябрь — Декабрь 2024</div>
+          </div>
+          <div class="case-badge">2.5 месяца</div>
         </div>
-        <div class="case-badge">2.5 месяца</div>
-      </div>
-
-      <div class="case-request">
-        <div class="case-request-label">С чем пришла</div>
-        <p>Дора пришла в 18 лет — с диким страхом зала, стеснением и боязнью взглядов со стороны. Заходила в раздевалку и не решалась выйти на пол. Тренировалась в рашгарде, пряча тело даже от себя. Ушла — стройной, женственной и уверенной в себе девушкой.</p>
-      </div>
-
-      <div class="case-params">
-        <div class="case-param-row">
-          <span class="param-label">Рост</span>
-          <span class="param-val">173 см</span>
+        <div class="case-request">
+          <div class="case-request-label">С чем пришла</div>
+          <p>Пришла в 18 лет с диким страхом зала, стеснением и боязнью взглядов. Заходила в раздевалку и не решалась выйти на пол. Тренировалась в рашгарде, пряча тело даже от себя. <strong>Ушла — стройной, женственной и уверенной в себе.</strong></p>
         </div>
-        <div class="case-param-row">
-          <span class="param-label">Вес</span>
-          <span class="param-val">56 → <strong>55 кг</strong></span>
+        <div class="case-params">
+          <div class="case-param-row">Рост · <strong>173 см</strong></div>
+          <div class="case-param-row">Вес · 56 → <strong>55 кг</strong></div>
         </div>
-      </div>
-
-      <div class="case-stats">
-        <div class="case-stat">Талия <span>−5 см</span></div>
-        <div class="case-stat">Бёдра <span>−4 см</span></div>
-        <div class="case-stat">Ноги <span>−2 см</span></div>
-        <div class="case-stat">Ягодицы <span>↑ форма</span></div>
-      </div>
-
-      <div class="rashgard-quote">
-        <div class="rashgard-quote-icon">💬</div>
-        <div class="rashgard-quote-text">
-          "Видимо я просто ходила в рашгарде и не замечала изменений — пока не сделала фото"
+        <div class="case-stats">
+          <div class="case-stat"><div class="case-stat-label">Талия</div><div class="case-stat-val">−5 см</div></div>
+          <div class="case-stat"><div class="case-stat-label">Бёдра</div><div class="case-stat-val">−4 см</div></div>
+          <div class="case-stat"><div class="case-stat-label">Ноги</div><div class="case-stat-val">−2 см</div></div>
+          <div class="case-stat"><div class="case-stat-label">Ягодицы</div><div class="case-stat-val">↑ форма</div></div>
         </div>
-        <div class="rashgard-quote-author">— Дора, из переписки после 2.5 месяцев работы</div>
-      </div>
-
-      <!-- Видео Доры -->
-      <div class="case-video-wrap">
-        <div class="case-video-label">Видео · результат</div>
-        <div class="case-yt-wrap">
-          <iframe
-            class="case-yt-frame"
-            src="https://www.youtube.com/embed/C05e41mZkPc?autoplay=1&mute=1&loop=1&playlist=C05e41mZkPc&controls=0&playsinline=1&rel=0&modestbranding=1&showinfo=0&iv_load_policy=3&disablekb=1"
-            frameborder="0"
-            allow="encrypted-media"
-            allowfullscreen
-          ></iframe>
+        <div class="case-quote">
+          <div class="case-quote-text">«Видимо я просто ходила в рашгарде и не замечала изменений — пока не сделала фото»</div>
+          <div class="case-quote-author">— Дора, из переписки после 2.5 месяцев работы</div>
         </div>
-      </div>
-      
-
-      <!-- Фото до/после -->
-      <div class="case-photos-wrap">
-        <div class="case-photo-block">
-          <div class="photo-label-top">До · Октябрь 2024</div>
-          <div class="photo-box case-photo-real" style="aspect-ratio:3/4">
-            <img src="img/results_1.jpg" alt="До" />
-            <div class="photo-label">До</div>
+        <div class="case-video">
+          <div class="case-video-label">Видео · результат</div>
+          <iframe src="https://www.youtube.com/embed/C05e41mZkPc?autoplay=1&mute=1&loop=1&playlist=C05e41mZkPc&controls=0&playsinline=1&rel=0&modestbranding=1&showinfo=0&iv_load_policy=3&disablekb=1" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="case-photos">
+          <div class="case-photo">
+            <div class="photo-label-top">До · Октябрь 2024</div>
+            <img src="img/results_1.jpg" alt="Дора — до">
+          </div>
+          <div class="case-photo">
+            <div class="photo-label-top">После · Декабрь 2024</div>
+            <img src="img/results_2.jpg" alt="Дора — после">
           </div>
         </div>
-        <div class="case-photo-block">
-          <div class="photo-label-top">После · Декабрь 2024</div>
-          <div class="photo-box case-photo-real" style="aspect-ratio:3/4">
-            <img src="img/results_2.jpg" alt="После" />
-            <div class="photo-label">После</div>
+      </div>
+
+      <!-- Case 2 — Зайтуна -->
+      <div class="case-card">
+        <div class="case-header">
+          <div class="case-avatar">👩</div>
+          <div class="case-meta">
+            <div class="case-name">Зайтуна</div>
+            <div class="case-period">18.05 — 08.06.2025</div>
+          </div>
+          <div class="case-badge">22 дня</div>
+        </div>
+        <div class="case-request">
+          <div class="case-request-label">С чем пришла</div>
+          <p>Запрос — не «похудеть», а улучшить композицию тела, качество кожи и нарастить мышечную массу. Именно поэтому разница в весе всего 3 кг — но посмотри на тело.</p>
+        </div>
+        <div class="case-stats">
+          <div class="case-stat"><div class="case-stat-label">Вес</div><div class="case-stat-val">−3 кг</div></div>
+          <div class="case-stat"><div class="case-stat-label">Талия</div><div class="case-stat-val">−3 см</div></div>
+          <div class="case-stat"><div class="case-stat-label">Бёдра</div><div class="case-stat-val">−3 см</div></div>
+          <div class="case-stat"><div class="case-stat-label">Под грудью</div><div class="case-stat-val">−3 см</div></div>
+        </div>
+        <div class="case-insight">
+          <div class="case-insight-title">Похудение ≠ Композиция тела</div>
+          <p>Можно скинуть 10 кг за месяц — весы порадуют. Но это не про здоровье и не про красоту. Настоящий результат — это когда тело <strong>меняется</strong> изнутри, а не становится меньше. −3 кг и совершенно другое тело — это и есть работа с композицией.</p>
+        </div>
+        <div class="case-photos">
+          <div class="case-photo">
+            <div class="photo-label-top">До / После · 22 дня</div>
+            <img src="img/results_3.jpg" alt="Зайтуна до/после" style="aspect-ratio:9/16">
+          </div>
+          <div class="case-photo">
+            <div class="photo-label-top">Замеры из переписки</div>
+            <img src="img/results_4.jpg" alt="Замеры Зайтуны" style="aspect-ratio:9/16">
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 3 — Никита -->
+      <div class="case-card">
+        <div class="case-header">
+          <div class="case-avatar">👨</div>
+          <div class="case-meta">
+            <div class="case-name">Никита</div>
+            <div class="case-period">Май 2024 — Май 2025</div>
+          </div>
+          <div class="case-badge">~1 год</div>
+        </div>
+        <div class="case-request">
+          <div class="case-request-label">С чем пришёл</div>
+          <p>Запрос на набор качественной мышечной массы. За 12 месяцев стабильной работы — плюс 17 кг чистой массы. Но главное — он говорит, что в повседневной жизни стал чувствовать себя <strong>увереннее, энергичнее и крепче</strong>.</p>
+        </div>
+        <div class="case-stats">
+          <div class="case-stat"><div class="case-stat-label">Вес</div><div class="case-stat-val">77→94</div></div>
+          <div class="case-stat"><div class="case-stat-label">Грудь</div><div class="case-stat-val">103→110</div></div>
+          <div class="case-stat"><div class="case-stat-label">Талия</div><div class="case-stat-val">88→90</div></div>
+          <div class="case-stat"><div class="case-stat-label">Бицепс</div><div class="case-stat-val">30→36</div></div>
+        </div>
+        <div class="case-quote">
+          <div class="case-quote-text">«12 месяцев стабильной работы — и я наконец чувствую себя в своём теле»</div>
+          <div class="case-quote-author">— Никита, из переписки</div>
+        </div>
+        <div class="case-photos">
+          <div class="case-photo">
+            <div class="photo-label-top">77 кг → 94 кг · Почти год</div>
+            <img src="img/results_5.jpg" alt="Никита до/после" style="aspect-ratio:9/16">
+          </div>
+          <div class="case-photo">
+            <div class="photo-label-top">Замеры из переписки</div>
+            <img src="img/results_6.jpg" alt="Замеры Никиты" style="aspect-ratio:9/16">
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 4 — Полина -->
+      <div class="case-card">
+        <div class="case-header">
+          <div class="case-avatar">👩</div>
+          <div class="case-meta">
+            <div class="case-name">Полина</div>
+            <div class="case-period">6 мая — 4 июня</div>
+          </div>
+          <div class="case-badge">1 месяц</div>
+        </div>
+        <div class="case-request">
+          <div class="case-request-label">С чем пришла</div>
+          <p>Когда Полина пришла — она не могла присесть без того, чтобы упасть. Силы в ногах, стабилизаторах, всём теле — не было от слова совсем. Наша цель — не похудеть. Цель — сделать тело <strong>здоровым и красивым</strong>.</p>
+        </div>
+        <div class="case-stats">
+          <div class="case-stat"><div class="case-stat-label">Вес</div><div class="case-stat-val">−3 кг</div></div>
+          <div class="case-stat"><div class="case-stat-label">Талия</div><div class="case-stat-val">−6 см</div></div>
+          <div class="case-stat"><div class="case-stat-label">Грудь</div><div class="case-stat-val">−9 см</div></div>
+          <div class="case-stat"><div class="case-stat-label">Суммарно</div><div class="case-stat-val">−17 см</div></div>
+        </div>
+        <div class="case-insight">
+          <div class="case-insight-title">−17 см на 2000 калорий</div>
+          <p>Мы не голодали. Полина питалась на <strong>2000 ккал в день</strong>. Никакого дефицита ради дефицита. Только грамотный подход — и тело ответило само.</p>
+        </div>
+        <div class="case-photos">
+          <div class="case-photo">
+            <div class="photo-label-top">До / После · 1 месяц</div>
+            <img src="img/results_7.jpg" alt="Полина до/после" style="aspect-ratio:9/16">
+          </div>
+          <div class="case-photo">
+            <div class="photo-label-top">Замеры и питание</div>
+            <img src="img/results_8.jpg" alt="Замеры Полины" style="aspect-ratio:9/16">
           </div>
         </div>
       </div>
 
     </div>
-
-    <!-- Case 2 — Зайтуна -->
-    <div class="case-card" style="margin-top:16px">
-      <div class="case-header">
-        <div class="case-avatar">👩</div>
-        <div class="case-meta">
-          <div class="case-name">Зайтуна</div>
-          <div class="case-period">18.05 — 08.06.2025 · 22 дня</div>
-        </div>
-        <div class="case-badge">22 дня</div>
-      </div>
-
-      <div class="case-request">
-        <div class="case-request-label">С чем пришла</div>
-        <p>Запрос — не «похудеть», а улучшить композицию тела, качество кожи и нарастить мышечную массу. Именно поэтому разница в весе всего 3 кг — но посмотри на тело.</p>
-      </div>
-
-      <div class="case-stats">
-        <div class="case-stat">Вес <span>−3 кг</span></div>
-        <div class="case-stat">Талия <span>−3 см</span></div>
-        <div class="case-stat">Бёдра <span>−3 см</span></div>
-        <div class="case-stat">Под грудью <span>−3 см</span></div>
-      </div>
-
-      <!-- Инсайт про композицию -->
-      <div class="composition-insight">
-        <div class="composition-insight-title">Похудение ≠ Композиция тела</div>
-        <p>Можно скинуть 10 кг за месяц — весы порадуют. Но это не про здоровье и не про красоту. Настоящий результат — это когда тело <strong>меняется</strong> изнутри, а не просто становится меньше. −3 кг и совершенно другое тело — это и есть работа с композицией.</p>
-      </div>
-
-      <div class="case-photos-wrap">
-        <div class="case-photo-block">
-          <div class="photo-label-top">До / После · 22 дня</div>
-          <div class="photo-box case-photo-real" style="aspect-ratio:9/16">
-            <img src="img/results_3.jpg" alt="Зайтуна до/после" />
-            <div class="photo-label">22 дня</div>
-          </div>
-        </div>
-        <div class="case-photo-block">
-          <div class="photo-label-top">Замеры из переписки</div>
-          <div class="photo-box case-photo-real" style="aspect-ratio:9/16">
-            <img src="img/results_4.jpg" alt="Замеры Зайтуны" />
-            <div class="photo-label">Цифры</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Case 3 — Никита -->
-    <div class="case-card" style="margin-top:16px">
-      <div class="case-header">
-        <div class="case-avatar">👨</div>
-        <div class="case-meta">
-          <div class="case-name">Никита</div>
-          <div class="case-period">Май 2024 — Май 2025 · 12 месяцев</div>
-        </div>
-        <div class="case-badge">~1 год</div>
-      </div>
-
-      <div class="case-request">
-        <div class="case-request-label">С чем пришёл</div>
-        <p>Никита пришёл с запросом на набор качественной мышечной массы. За 12 месяцев стабильной работы — плюс 17 кг чистой массы. Но главное — он говорит, что в повседневной жизни стал чувствовать себя <strong>увереннее, энергичнее и крепче</strong>. Тело изменилось снаружи — и внутри тоже.</p>
-      </div>
-
-      <div class="case-stats">
-        <div class="case-stat">Вес <span>77 → 94 кг</span></div>
-        <div class="case-stat">Грудь <span>103 → 110</span></div>
-        <div class="case-stat">Талия <span>88 → 90</span></div>
-        <div class="case-stat">Бицепс <span>30 → 36</span></div>
-      </div>
-
-      <div class="rashgard-quote">
-        <div class="rashgard-quote-icon">💬</div>
-        <div class="rashgard-quote-text">
-          "12 месяцев стабильной работы — и я наконец чувствую себя в своём теле"
-        </div>
-        <div class="rashgard-quote-author">— Никита, из переписки</div>
-      </div>
-
-      <div class="case-photos-wrap">
-        <div class="case-photo-block">
-          <div class="photo-label-top">77 кг → 94 кг · Почти год</div>
-          <div class="photo-box case-photo-real" style="aspect-ratio:9/16">
-            <img src="img/results_5.jpg" alt="Никита до/после" />
-            <div class="photo-label">~1 год</div>
-          </div>
-        </div>
-        <div class="case-photo-block">
-          <div class="photo-label-top">Замеры из переписки</div>
-          <div class="photo-box case-photo-real" style="aspect-ratio:9/16">
-            <img src="img/results_6.jpg" alt="Замеры Никиты" />
-            <div class="photo-label">Цифры</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Case 4 — Полина -->
-    <div class="case-card" style="margin-top:16px">
-      <div class="case-header">
-        <div class="case-avatar">👩</div>
-        <div class="case-meta">
-          <div class="case-name">Полина</div>
-          <div class="case-period">6 мая — 4 июня · 1 месяц</div>
-        </div>
-        <div class="case-badge">1 месяц</div>
-      </div>
-
-      <div class="case-request">
-        <div class="case-request-label">С чем пришла</div>
-        <p>Когда Полина пришла — она не могла присесть без того, чтобы упасть. Силы в ногах, стабилизаторах, всём теле — не было от слова совсем. Наша цель была не похудеть. Наша цель — сделать тело <strong>здоровым и красивым</strong>.</p>
-      </div>
-
-      <div class="case-stats">
-        <div class="case-stat">Вес <span>−3 кг</span></div>
-        <div class="case-stat">Талия <span>−6 см</span></div>
-        <div class="case-stat">Грудь <span>−9 см</span></div>
-        <div class="case-stat">Суммарно <span>−17 см</span></div>
-      </div>
-
-      <div class="composition-insight">
-        <div class="composition-insight-title">−17 см на 2000 калорий</div>
-        <p>Мы не голодали. Полина питалась на <strong>2000 ккал в день</strong>. Никакого дефицита ради дефицита. Только грамотный подход — и тело ответило само.</p>
-      </div>
-
-      <div class="case-photos-wrap">
-        <div class="case-photo-block">
-          <div class="photo-label-top">До / После · 1 месяц</div>
-          <div class="photo-box case-photo-real" style="aspect-ratio:9/16">
-            <img src="img/results_7.jpg" alt="Полина до/после" />
-            <div class="photo-label">1 месяц</div>
-          </div>
-        </div>
-        <div class="case-photo-block">
-          <div class="photo-label-top">Замеры и питание</div>
-          <div class="photo-box case-photo-real" style="aspect-ratio:9/16">
-            <img src="img/results_8.jpg" alt="Замеры Полины" />
-            <div class="photo-label">Цифры</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<!-- BLOCK — FEARS / ОТЗЫВЫ -->
-<section class="fears-section" id="fears">
+<!-- ════════════════ FEARS ════════════════ -->
+<section class="section light-bg" id="fears">
   <div class="container">
-    <div class="tag">Отзывы девушек</div>
-    <h2>«Я думала, что это<br><em class="gold">не для меня»</em></h2>
-    <p class="fears-subtitle">Самые частые страхи — и что происходит, когда их всё-таки преодолевают</p>
+    <div class="eyebrow">Отзывы девушек</div>
+    <h2 class="h-display section-title">«Я думала, что это <em>не для меня».</em></h2>
+    <p class="lead section-lead">Самые частые страхи — и что происходит, когда их всё-таки преодолевают.</p>
 
     <div class="fears-grid">
-
-      <!-- 1 -->
       <div class="fear-card">
-        <div class="fear-quote-mark">"</div>
-        <div class="fear-tag-pill">Боюсь перекачаться</div>
-        <p class="fear-text">Я реально боялась, что стану как мужик. Смотрела на девушек в зале с такими руками... Даниил объяснил мне на пальцах: чтобы «перекачаться», нужно специально к этому стремиться годами. Я занималась 4 месяца — стала просто <strong>упругой и подтянутой</strong>. Никакой «мужиковатости».</p>
+        <div class="fear-mark">"</div>
+        <div class="fear-tag">Боюсь перекачаться</div>
+        <p class="fear-text">Я реально боялась, что стану как мужик. Даниил объяснил: чтобы «перекачаться», нужно специально к этому стремиться годами. Я занималась 4 месяца — стала просто <strong>упругой и подтянутой</strong>.</p>
         <div class="fear-author">
-          <div class="fear-avatar" style="background: linear-gradient(135deg, #d4a96a, #b8834a);">А</div>
-          <div>
-            <div class="fear-name">Арина, 23 года</div>
-            <div class="fear-meta">Онлайн · 3 месяца работы</div>
-          </div>
+          <div class="fear-avatar" style="background:linear-gradient(135deg,#d4a96a,#b8834a);">А</div>
+          <div><div class="fear-name">Арина, 23 года</div><div class="fear-meta">Онлайн · 3 месяца</div></div>
         </div>
       </div>
 
-      <!-- 2 -->
       <div class="fear-card">
-        <div class="fear-quote-mark">"</div>
-        <div class="fear-tag-pill">Нет времени</div>
-        <p class="fear-text">У меня работа, ребёнок, муж — я говорила себе «начну, когда будет время». Его не было никогда. Мы с Даниилом нашли 3 тренировки в неделю по 45 минут, которые я вписала в расписание как встречу. <strong>Минус 8 кг за 5 месяцев</strong> — без ущерба для семьи.</p>
+        <div class="fear-mark">"</div>
+        <div class="fear-tag">Нет времени</div>
+        <p class="fear-text">У меня работа, ребёнок, муж — я говорила себе «начну, когда будет время». Мы нашли 3 тренировки в неделю по 45 минут. <strong>Минус 8 кг за 5 месяцев</strong> — без ущерба для семьи.</p>
         <div class="fear-author">
-          <div class="fear-avatar" style="background: linear-gradient(135deg, #7eb8d4, #4a8fad);">М</div>
-          <div>
-            <div class="fear-name">Маша, 31 год</div>
-            <div class="fear-meta">Онлайн · 5 месяцев работы</div>
-          </div>
+          <div class="fear-avatar" style="background:linear-gradient(135deg,#7eb8d4,#4a8fad);">М</div>
+          <div><div class="fear-name">Маша, 31 год</div><div class="fear-meta">Онлайн · 5 месяцев</div></div>
         </div>
       </div>
 
-      <!-- 3 -->
       <div class="fear-card">
-        <div class="fear-quote-mark">"</div>
-        <div class="fear-tag-pill">Уже пробовала — не вышло</div>
-        <p class="fear-text">Три раза записывалась в зал, три раза бросала через месяц. Не понимала, что делать, чувствовала себя дурой среди тренажёров. Даниил объяснял каждое движение — <strong>без снисхождения, но и без осуждения</strong>. Впервые я дошла до результата.</p>
+        <div class="fear-mark">"</div>
+        <div class="fear-tag">Уже пробовала — не вышло</div>
+        <p class="fear-text">Три раза записывалась в зал, три раза бросала. Не понимала, что делать. Даниил объяснял каждое движение — <strong>без снисхождения, но и без осуждения</strong>. Впервые я дошла до результата.</p>
         <div class="fear-author">
-          <div class="fear-avatar" style="background: linear-gradient(135deg, #d47e9b, #ad4a70);">К</div>
-          <div>
-            <div class="fear-name">Катя, 27 лет</div>
-            <div class="fear-meta">Онлайн · 4 месяца работы</div>
-          </div>
+          <div class="fear-avatar" style="background:linear-gradient(135deg,#d47e9b,#ad4a70);">К</div>
+          <div><div class="fear-name">Катя, 27 лет</div><div class="fear-meta">Онлайн · 4 месяца</div></div>
         </div>
       </div>
 
-      <!-- 4 -->
       <div class="fear-card">
-        <div class="fear-quote-mark">"</div>
-        <div class="fear-tag-pill">Сначала похудею, потом начну</div>
-        <p class="fear-text">Я ждала момента, когда буду «достаточно в форме» чтобы прийти в зал. Звучит смешно, но я правда так думала. Даниил сказал: именно зал и помогает прийти в форму. Пришла с 20+ лишними кг — <strong>сейчас минус 17, и я в зале уже год</strong>.</p>
+        <div class="fear-mark">"</div>
+        <div class="fear-tag">Сначала похудею, потом начну</div>
+        <p class="fear-text">Я ждала момента, когда буду «достаточно в форме» чтобы прийти в зал. Даниил сказал: именно зал и помогает прийти в форму. Пришла с 20+ лишними кг — <strong>сейчас минус 17, год в зале</strong>.</p>
         <div class="fear-author">
-          <div class="fear-avatar" style="background: linear-gradient(135deg, #8ed47e, #4aad5a);">Н</div>
-          <div>
-            <div class="fear-name">Надя, 29 лет</div>
-            <div class="fear-meta">Онлайн · 11 месяцев работы</div>
-          </div>
+          <div class="fear-avatar" style="background:linear-gradient(135deg,#8ed47e,#4aad5a);">Н</div>
+          <div><div class="fear-name">Надя, 29 лет</div><div class="fear-meta">Онлайн · 11 месяцев</div></div>
         </div>
       </div>
 
-      <!-- 5 -->
       <div class="fear-card">
-        <div class="fear-quote-mark">"</div>
-        <div class="fear-tag-pill">Это больно и я сломаюсь</div>
-        <p class="fear-text">После двух травм у меня была настоящая фобия. Любое «жжение» в мышцах казалось опасным. Мы начали очень мягко — без фанатизма, с полным контролем техники. <strong>Ни одной травмы за 6 месяцев</strong>. Теперь я сама слышу своё тело.</p>
+        <div class="fear-mark">"</div>
+        <div class="fear-tag">Это больно и я сломаюсь</div>
+        <p class="fear-text">После двух травм у меня была фобия. Любое жжение в мышцах казалось опасным. Начали мягко — с контролем техники. <strong>Ни одной травмы за 6 месяцев</strong>. Теперь я слышу своё тело.</p>
         <div class="fear-author">
-          <div class="fear-avatar" style="background: linear-gradient(135deg, #d4c47e, #ad9e4a);">Л</div>
-          <div>
-            <div class="fear-name">Лиза, 34 года</div>
-            <div class="fear-meta">Онлайн · 6 месяцев работы</div>
-          </div>
+          <div class="fear-avatar" style="background:linear-gradient(135deg,#d4c47e,#ad9e4a);">Л</div>
+          <div><div class="fear-name">Лиза, 34 года</div><div class="fear-meta">Онлайн · 6 месяцев</div></div>
         </div>
       </div>
 
-      <!-- 6 -->
       <div class="fear-card">
-        <div class="fear-quote-mark">"</div>
-        <div class="fear-tag-pill">Мне некомфортно в зале</div>
-        <p class="fear-text">Заходила в зал и чувствовала, что все смотрят и осуждают. Тренировалась в углу, избегала свободных весов. Даниил показал мне зал как рабочее пространство, а не подиум. Теперь я хожу туда как <strong>на работу — спокойно и уверенно</strong>.</p>
+        <div class="fear-mark">"</div>
+        <div class="fear-tag">Мне некомфортно в зале</div>
+        <p class="fear-text">Заходила в зал и чувствовала, что все смотрят. Тренировалась в углу, избегала свободных весов. Даниил показал зал как рабочее пространство. Теперь хожу туда <strong>спокойно и уверенно</strong>.</p>
         <div class="fear-author">
-          <div class="fear-avatar" style="background: linear-gradient(135deg, #b47ed4, #8a4aad);">В</div>
-          <div>
-            <div class="fear-name">Вика, 25 лет</div>
-            <div class="fear-meta">Онлайн · 7 месяцев работы</div>
-          </div>
+          <div class="fear-avatar" style="background:linear-gradient(135deg,#b47ed4,#8a4aad);">В</div>
+          <div><div class="fear-name">Вика, 25 лет</div><div class="fear-meta">Онлайн · 7 месяцев</div></div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- BLOCK 6 — SERVICES
-════════════════════════════════════════ -->
-<section class="services" id="services">
+<!-- ════════════════ SERVICES ════════════════ -->
+<section class="section" id="services">
   <div class="container">
-    <div class="tag">Форматы работы</div>
-    <h2>Выбери свой<br><em class="gold">формат</em></h2>
+    <div class="eyebrow">Программы</div>
+    <h2 class="h-display section-title">Выбери своё.</h2>
+    <p class="lead section-lead">Три уровня вовлечённости. От тренировок 1-в-1 до полного наставничества.</p>
 
-    <!-- Service 1 -->
-    <div class="service-card">
-      <div class="service-icon">🏋️</div>
-      <div class="service-title">Персональные тренировки</div>
-      <div class="service-sub">По запросу · Блок из 10 занятий</div>
-      <div class="service-features">
-        <div class="service-feature">Индивидуальная программа под твои цели</div>
-        <div class="service-feature">Контроль техники, дыхания и кора на каждой тренировке</div>
-        <div class="service-feature">Работа с осанкой и мышечными дисбалансами</div>
-        <div class="service-feature">Ты чувствуешь зал своим местом уже с первого занятия</div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🏋️</div>
+        <div class="service-title">Персональные тренировки</div>
+        <div class="service-sub">По запросу · Блок из 10 занятий</div>
+        <div class="service-features">
+          <div class="service-feature">Индивидуальная программа под твои цели</div>
+          <div class="service-feature">Контроль техники, дыхания и кора</div>
+          <div class="service-feature">Работа с осанкой и дисбалансами</div>
+          <div class="service-feature">Зал становится твоим местом с первого занятия</div>
+        </div>
+        <div class="service-price">2 000 AED</div>
+        <div class="service-price-sub">за блок из 10 тренировок</div>
+        <div class="service-price-rub">≈ 52 000 ₽ по текущему курсу</div>
+        <div class="service-cta">
+          <a href="https://t.me/danikeeb" class="btn" target="_blank">Записаться</a>
+        </div>
       </div>
-      <div class="service-price">2 000 AED</div>
-      <div class="service-price-sub">за блок из 10 тренировок</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.35);margin-top:6px;letter-spacing:0.3px;">≈ 52 000 ₽ по текущему курсу</div>
-      <div class="btn-row">
-        <a href="https://t.me/danikeeb" class="btn" target="_blank">Записаться</a>
+
+      <div class="service-card featured">
+        <div class="service-badge">Хит</div>
+        <div class="service-icon">📱</div>
+        <div class="service-title">Онлайн-сопровождение</div>
+        <div class="service-sub">3 месяца · Под ключ · Гарантия результата</div>
+        <div class="service-features">
+          <div class="service-feature">Программа тренировок с видео упражнений</div>
+          <div class="service-feature">Комментарии по технике под каждое видео</div>
+          <div class="service-feature">Правильные пищевые привычки — не диета</div>
+          <div class="service-feature">Ответы на вопросы в течение 3 месяцев</div>
+          <div class="service-feature">Отслеживание прогресса и корректировка</div>
+        </div>
+        <div class="service-price">2 000 AED</div>
+        <div class="service-price-sub">за 3 месяца · ~22 AED в день</div>
+        <div class="service-price-rub">≈ 52 000 ₽ · ~580 ₽ в день</div>
+        <div class="service-cta">
+          <a href="https://t.me/danikeeb" class="btn" target="_blank">Записаться</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">💎</div>
+        <div class="service-title">Личное наставничество</div>
+        <div class="service-sub">Путь к телу мечты и крутому ощущению себя</div>
+        <div class="service-features">
+          <div class="service-feature">Видеозвонки лично со мной — работаем вместе</div>
+          <div class="service-feature">Работа с мышлением и отношением к себе</div>
+          <div class="service-feature">Персональный маршрут к цели</div>
+          <div class="service-feature">Максимальное погружение и поддержка</div>
+        </div>
+        <div class="service-price">3 000 $</div>
+        <div class="service-price-sub">максимум за минимум времени</div>
+        <div class="service-price-rub">≈ 270 000 ₽ по текущему курсу</div>
+        <div class="service-cta">
+          <a href="https://t.me/danikeeb" class="btn outline" target="_blank">Узнать подробнее</a>
+        </div>
       </div>
     </div>
-
-    <!-- Service 2 (featured) -->
-    <div class="service-card featured">
-      <div class="service-feat-badge">Хит</div>
-      <div class="service-icon">📱</div>
-      <div class="service-title">Онлайн-сопровождение</div>
-      <div class="service-sub">3 месяца · Гарантия результата · Под ключ</div>
-      <div class="service-features">
-        <div class="service-feature">Индивидуальная программа тренировок с видео упражнений</div>
-        <div class="service-feature">Комментарии по технике под каждое твоё видео</div>
-        <div class="service-feature">Правильные пищевые привычки — не диета, а система</div>
-        <div class="service-feature">Ответы на вопросы в течение всех 3 месяцев</div>
-        <div class="service-feature">Отслеживание прогресса и корректировка плана</div>
-      </div>
-      <div class="service-price">2 000 AED</div>
-      <div class="service-price-sub">за 3 месяца · это ~22 AED в день</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.35);margin-top:6px;letter-spacing:0.3px;">≈ 52 000 ₽ · ~580 ₽ в день</div>
-      <div class="btn-row">
-        <a href="https://t.me/danikeeb" class="btn" target="_blank">Записаться</a>
-      </div>
-    </div>
-
-    <!-- Service 3 -->
-    <div class="service-card">
-      <div class="service-icon">💎</div>
-      <div class="service-title">Личное наставничество</div>
-      <div class="service-sub">Путь к телу мечты и крутому ощущению себя в нём</div>
-      <div class="service-features">
-        <div class="service-feature">Видеозвонки лично со мной — работаем вместе</div>
-        <div class="service-feature">Работа с мышлением и отношением к себе</div>
-        <div class="service-feature">Персональный маршрут к твоей конкретной цели</div>
-        <div class="service-feature">Максимальное погружение и поддержка</div>
-      </div>
-      <div class="service-price">3 000 $</div>
-      <div class="service-price-sub">максимальный результат за минимальное время</div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.35);margin-top:6px;letter-spacing:0.3px;">≈ 270 000 ₽ по текущему курсу</div>
-      <div class="btn-row">
-        <a href="https://t.me/danikeeb" class="btn btn-outline" target="_blank">Узнать подробнее</a>
-      </div>
-    </div>
-
   </div>
 </section>
 
-BLOCK — КОНСУЛЬТАЦИЯ
-════════════════════════════════════════ -->
-<section class="consult-section" id="consult">
+<!-- ════════════════ CONSULTATION ════════════════ -->
+<section class="section light-bg" id="consult">
   <div class="container">
-    <div class="tag">Первый шаг</div>
-    <h2>Что будет на<br><em class="gold">консультации</em></h2>
-    <p class="consult-sub">Это не продающий звонок. Это разговор — честный и без давления.</p>
+    <div class="eyebrow">Первый шаг</div>
+    <h2 class="h-display section-title">Что будет на консультации.</h2>
+    <p class="lead section-lead">Это не продающий звонок. Это разговор — честный и без давления.</p>
 
     <div class="consult-grid">
-
       <div class="consult-steps">
-
         <div class="consult-step">
           <div class="consult-step-num">01</div>
-          <div class="consult-step-body">
+          <div>
             <div class="consult-step-title">Я выслушаю тебя — первые 10 минут только твои</div>
-            <p class="consult-step-text">Расскажи всё: чего хочешь, что уже пробовала, что мешает, что пугает. Без осуждения, без спешки. Я не перебиваю и не продаю — я слушаю.</p>
+            <div class="consult-step-text">Расскажи всё: чего хочешь, что уже пробовала, что мешает, что пугает. Без осуждения, без спешки. Я не перебиваю и не продаю — я слушаю.</div>
           </div>
         </div>
-
         <div class="consult-step">
           <div class="consult-step-num">02</div>
-          <div class="consult-step-body">
-            <div class="consult-step-title">Дам тебе готовые варианты решения — прямо здесь</div>
-            <p class="consult-step-text">Не «запишись и узнаешь» — а конкретно: что именно тебе нужно делать, в каком формате, почему именно так. Ты уйдёшь с пониманием, даже если мы не начнём работать.</p>
+          <div>
+            <div class="consult-step-title">Дам готовые варианты — прямо здесь</div>
+            <div class="consult-step-text">Не «запишись и узнаешь» — конкретно: что именно тебе нужно делать, в каком формате, почему именно так. Ты уйдёшь с пониманием.</div>
           </div>
         </div>
-
         <div class="consult-step">
           <div class="consult-step-num">03</div>
-          <div class="consult-step-body">
+          <div>
             <div class="consult-step-title">Никакого давления — вообще</div>
-            <p class="consult-step-text">Я не буду убеждать, торопить или создавать искусственную срочность. Если почувствуешь, что я могу помочь — скажешь сама. Если нет — ничего страшного, уйдёшь с пользой.</p>
+            <div class="consult-step-text">Я не убеждаю, не тороплю, не создаю срочность. Если почувствуешь, что я могу помочь — скажешь сама. Если нет — уйдёшь с пользой.</div>
           </div>
         </div>
-
         <div class="consult-step">
           <div class="consult-step-num">04</div>
-          <div class="consult-step-body">
-            <div class="consult-step-title">Если решим работать — построим план с нуля под тебя</div>
-            <p class="consult-step-text">Никаких шаблонов. Программа, питание, ритм — всё под твой образ жизни, твои цели и твоё тело. Ты входишь в процесс сразу, без недель ожидания.</p>
+          <div>
+            <div class="consult-step-title">Если решим работать — план с нуля под тебя</div>
+            <div class="consult-step-text">Никаких шаблонов. Программа, питание, ритм — всё под твой образ жизни. Ты входишь в процесс сразу, без недель ожидания.</div>
           </div>
         </div>
-
       </div>
 
-      <div class="consult-card">
-        <div class="consult-card-icon">💬</div>
-        <div class="consult-card-title">Консультация бесплатная</div>
-        <p class="consult-card-text">Занимает 15–20 минут. Проходит в Telegram или WhatsApp — как удобнее. Без видео, без обязательств.</p>
-        <div class="consult-card-points">
-          <div class="consult-point">✓ Выслушаю и разберу твою ситуацию</div>
-          <div class="consult-point">✓ Скажу честно — смогу ли я помочь</div>
-          <div class="consult-point">✓ Дам конкретные шаги — даже если не начнём</div>
-          <div class="consult-point">✓ Ни к чему не обязывает</div>
+      <div class="consult-cta-card">
+        <div class="ic">💬</div>
+        <h3>Консультация бесплатная</h3>
+        <p>15–20 минут. В Telegram или WhatsApp — как удобнее. Без видео, без обязательств.</p>
+        <div class="consult-points">
+          <div class="consult-point">Выслушаю и разберу твою ситуацию</div>
+          <div class="consult-point">Скажу честно — смогу ли помочь</div>
+          <div class="consult-point">Дам конкретные шаги</div>
+          <div class="consult-point">Ни к чему не обязывает</div>
         </div>
-        <a href="https://t.me/danikeeb" class="btn" target="_blank" style="width:100%;justify-content:center;margin-top:8px;">
-          Написать в Telegram
-        </a>
-        <a href="https://wa.me/905369307790" class="btn btn-outline" target="_blank" style="width:100%;justify-content:center;margin-top:10px;">
-          Написать в WhatsApp
-        </a>
-        <div style="display:flex;align-items:center;gap:12px;margin:18px 0 4px;">
-          <div style="flex:1;height:1px;background:rgba(255,255,255,0.08);"></div>
-          <span style="font-size:12px;color:var(--grey2);white-space:nowrap;">или сначала заполни анкету</span>
-          <div style="flex:1;height:1px;background:rgba(255,255,255,0.08);"></div>
-        </div>
-        <a href="https://danikeeb.github.io/quiz/" class="btn btn-outline" target="_blank" style="width:100%;justify-content:center;margin-top:4px;border-color:rgba(201,169,110,0.35);color:var(--gold);">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg>
-          Заполнить анкету — 7 минут
-        </a>
+        <a href="https://t.me/danikeeb" class="btn dark-mode" target="_blank">Написать в Telegram</a>
+        <a href="https://wa.me/905369307790" class="btn outline-mode" target="_blank">Написать в WhatsApp</a>
+        <div class="consult-cta-divider">или сначала анкета</div>
+        <a href="https://danikeeb.github.io/quiz/" class="btn quiz-mode" target="_blank">Заполнить анкету — 7 минут</a>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- BLOCK 8 — FINAL CTA
-════════════════════════════════════════ -->
+<!-- ════════════════ FINAL CTA ════════════════ -->
 <section class="final-cta" id="contact">
   <div class="container">
-    <div class="tag">Начать</div>
-    <h2>Ты уже достаточно<br>долго <em class="gold">откладывала</em></h2>
+    <div class="eyebrow">Начать</div>
+    <h2>Ты уже достаточно<br>долго <em>откладывала.</em></h2>
     <p>Первый шаг — просто написать. Я отвечу честно, выслушаю и скажу — смогу ли помочь именно тебе.</p>
-    <div class="btn-row">
-      <a href="https://t.me/danikeeb" class="btn" target="_blank">
-        <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
-          <path d="M21 5L2 12.5l7 1M21 5l-6 16-5-6.5M21 5L9 13.5m0 0V20l3-2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        Telegram
-      </a>
-      <a href="https://wa.me/905369307790" class="btn btn-outline" target="_blank">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0">
-          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.134.558 4.133 1.532 5.87L.057 23.59a.75.75 0 0 0 .92.92l5.733-1.474A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm5.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-        </svg>
-        WhatsApp
-      </a>
-      <a href="https://www.instagram.com/dani.keeb?igsh=MTgxZGV3NHQwajI2&utm_source=qr" class="btn btn-outline" target="_blank" rel="noopener">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-          <circle cx="12" cy="12" r="4"/>
-          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
-        </svg>
-        Instagram
-      </a>
+    <div class="final-cta-ctas">
+      <a href="https://t.me/danikeeb" class="btn large" target="_blank">Telegram</a>
+      <a href="https://wa.me/905369307790" class="btn outline large" target="_blank">WhatsApp</a>
+      <a href="https://www.instagram.com/dani.keeb?igsh=MTgxZGV3NHQwajI2&utm_source=qr" class="btn outline large" target="_blank" rel="noopener">Instagram</a>
     </div>
   </div>
 </section>
 
-<!-- SEO -->
-<section style="padding:48px 0; background:var(--bg2);">
+<!-- ════════════════ SEO BLOCK ════════════════ -->
+<section class="seo-block">
   <div class="container">
-    <div class="divider"></div>
-    <h2 style="font-size:22px; font-weight:800; margin-bottom:16px;">Онлайн-тренер для девушек — Даня keeb</h2>
-    <p style="color:var(--grey); font-size:15px; line-height:1.8; max-width:640px;">
-      Ищешь <strong style="color:var(--white)">персонального онлайн-тренера</strong>?
-      Даня keeb — тренер с опытом с 2017 года, специализируется на тренировках для девушек.
-      Работаю онлайн с девушками по всему миру: Дубай, Европа, США и СНГ.
-    </p>
+    <h3>Онлайн-тренер для девушек — Даня keeb</h3>
+    <p>Ищешь персонального онлайн-тренера? Даня keeb — тренер с опытом с 2017 года, специализируется на тренировках для девушек. Работаю онлайн с девушками по всему миру: Дубай, Европа, США и СНГ.</p>
   </div>
 </section>
 
-<footer>
+<!-- ════════════════ FOOTER ════════════════ -->
+<footer class="site-footer">
   <div class="container">
-    © 2026 Даня keeb — Персональный онлайн-тренер
+    <div class="site-footer-text">© 2026 Даня keeb — Персональный онлайн-тренер</div>
+    <div class="site-footer-links">
+      <a href="https://t.me/danikeeb" target="_blank">Telegram</a>
+      <a href="https://www.instagram.com/dani.keeb" target="_blank">Instagram</a>
+    </div>
   </div>
 </footer>
 
+<!-- ════════════════ SCRIPTS ════════════════ -->
 <script src="https://www.youtube.com/iframe_api"></script>
 <script>
 (function() {
@@ -969,13 +1590,10 @@ BLOCK — КОНСУЛЬТАЦИЯ
 
   window.onYouTubeIframeAPIReady = function() {
     player = new YT.Player('ytPlayer', {
-      events: {
-        onReady: function(e) { e.target.playVideo(); }
-      }
+      events: { onReady: function(e) { e.target.playVideo(); } }
     });
   };
 
-  // Центральная кнопка — пауза/плей
   var overlay    = document.getElementById('videoOverlay');
   var centerBtn  = document.getElementById('videoCenterBtn');
   var playIcon   = document.getElementById('playIcon');
@@ -987,32 +1605,29 @@ BLOCK — КОНСУЛЬТАЦИЯ
     if (!player) return;
     if (playing) {
       player.pauseVideo();
-      playIcon.style.display  = 'block';
+      playIcon.style.display = 'block';
       pauseIcon.style.display = 'none';
       centerBtn.classList.add('visible');
     } else {
       player.playVideo();
       pauseIcon.style.display = 'block';
-      playIcon.style.display  = 'none';
-      // скрыть кнопку паузы через секунду
+      playIcon.style.display = 'none';
       setTimeout(function() { centerBtn.classList.remove('visible'); }, 900);
     }
     playing = !playing;
   }
 
-  if (overlay)    overlay.addEventListener('click', togglePlay);
-  if (centerBtn)  centerBtn.addEventListener('click', togglePlay);
-
+  if (overlay)   overlay.addEventListener('click', togglePlay);
+  if (centerBtn) centerBtn.addEventListener('click', togglePlay);
   if (unmuteBtn) {
     unmuteBtn.addEventListener('click', function(e) {
       e.stopPropagation();
       if (!player) return;
       if (muted) { player.unMute(); unmuteBtn.textContent = '🔊'; }
-      else        { player.mute();  unmuteBtn.textContent = '🔇'; }
+      else       { player.mute();   unmuteBtn.textContent = '🔇'; }
       muted = !muted;
     });
   }
-
   if (restartBtn) {
     restartBtn.addEventListener('click', function(e) {
       e.stopPropagation();
@@ -1021,23 +1636,32 @@ BLOCK — КОНСУЛЬТАЦИЯ
       player.playVideo();
       playing = true;
       pauseIcon.style.display = 'block';
-      playIcon.style.display  = 'none';
+      playIcon.style.display = 'none';
       centerBtn.classList.remove('visible');
     });
   }
 
   // Drag-to-scroll slider
-  var slider = document.querySelector('.hero-clients-slider');
+  var slider = document.getElementById('clientsSlider');
   if (slider) {
     var isDown = false, startX, scrollLeft;
-    slider.addEventListener('mousedown', function(e) { isDown = true; startX = e.pageX - slider.offsetLeft; scrollLeft = slider.scrollLeft; });
-    slider.addEventListener('mouseleave', function() { isDown = false; });
-    slider.addEventListener('mouseup',   function() { isDown = false; });
-    slider.addEventListener('mousemove', function(e) { if (!isDown) return; e.preventDefault(); slider.scrollLeft = scrollLeft - (e.pageX - slider.offsetLeft - startX) * 1.2; });
+    slider.addEventListener('mousedown', function(e) {
+      isDown = true;
+      slider.classList.add('dragging');
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener('mouseleave', function() { isDown = false; slider.classList.remove('dragging'); });
+    slider.addEventListener('mouseup',    function() { isDown = false; slider.classList.remove('dragging'); });
+    slider.addEventListener('mousemove',  function(e) {
+      if (!isDown) return;
+      e.preventDefault();
+      slider.scrollLeft = scrollLeft - (e.pageX - slider.offsetLeft - startX) * 1.2;
+    });
   }
 })();
 
-// Отслеживание конверсий: клики по Telegram и WhatsApp
+// Конверсии: Telegram + WhatsApp
 document.querySelectorAll('a[href*="t.me"], a[href*="wa.me"]').forEach(function(link) {
   link.addEventListener('click', function() {
     gtag('event', 'conversion', {
