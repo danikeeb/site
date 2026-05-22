@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Даня keeb — превью в стиле Apple</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+
+:root {
+  --black:  #1d1d1f;
+  --grey:   #86868b;
+  --grey2:  #6e6e73;
+  --light:  #f5f5f7;
+  --line:   #d2d2d7;
+  --blue:   #0071e3;
+  --blue2:  #0077ed;
+}
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #fff;
+  color: var(--black);
+  font-size: 17px;
+  line-height: 1.47;
+  letter-spacing: -0.022em;
+}
+
+/* ─── NAV ─── */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 22px;
+}
+.nav-inner {
+  width: 100%;
+  max-width: 980px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo {
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: var(--black);
+  text-decoration: none;
+}
+.nav-links {
+  display: flex;
+  gap: 38px;
+}
+.nav-link {
+  font-size: 12px;
+  color: var(--black);
+  text-decoration: none;
+  opacity: 0.88;
+}
+.nav-link:hover { opacity: 1; }
+.nav-cta {
+  font-size: 12px;
+  color: var(--black);
+  text-decoration: none;
+  opacity: 0.88;
+}
+
+/* ─── HERO ─── */
+.hero {
+  background: #fff;
+  text-align: center;
+  padding: 56px 22px 0;
+  position: relative;
+  overflow: hidden;
+}
+.hero-eyebrow {
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 6px;
+}
+.hero-h1 {
+  font-size: 80px;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+.hero-h1 em {
+  font-style: normal;
+  background: linear-gradient(135deg, #1d1d1f 0%, #5e5e63 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-sub {
+  font-size: 24px;
+  color: var(--grey2);
+  font-weight: 400;
+  margin-bottom: 22px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-ctas {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  margin-bottom: 60px;
+  font-size: 17px;
+}
+.hero-cta-primary {
+  display: inline-block;
+  background: var(--blue);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 980px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.hero-cta-primary:hover { background: var(--blue2); }
+.hero-cta-link {
+  color: var(--blue);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.hero-cta-link:hover { text-decoration: underline; }
+.hero-cta-link::after { content: '›'; font-size: 20px; transform: translateY(-1px); }
+
+.hero-image {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 480px;
+  background:
+    radial-gradient(circle at 30% 50%, rgba(0,113,227,0.08) 0%, transparent 60%),
+    radial-gradient(circle at 70% 60%, rgba(255,159,67,0.06) 0%, transparent 50%),
+    linear-gradient(180deg, #fafafa 0%, #f0f0f2 100%);
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-image .placeholder {
+  text-align: center;
+  color: var(--grey);
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.hero-image .placeholder strong {
+  display: block;
+  font-size: 17px;
+  color: var(--grey2);
+  letter-spacing: 0;
+  text-transform: none;
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+/* ─── SECTION TEMPLATE ─── */
+.section {
+  padding: 140px 22px;
+  text-align: center;
+}
+.section-bg-light { background: var(--light); }
+.section-bg-dark  { background: var(--black); color: var(--light); }
+
+.eyebrow {
+  font-size: 21px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.eyebrow-blue { color: var(--blue); }
+.h2 {
+  font-size: 56px;
+  line-height: 1.07;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin-bottom: 16px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.h2-large {
+  font-size: 80px;
+  line-height: 1.05;
+  font-weight: 700;
+}
+.lead {
+  font-size: 21px;
+  color: var(--grey2);
+  font-weight: 400;
+  max-width: 640px;
+  margin: 0 auto 40px;
+  line-height: 1.4;
+}
+.section-bg-dark .lead { color: rgba(255,255,255,0.65); }
+
+/* ─── ABOUT SPLIT ─── */
+.about-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.about-card {
+  background: var(--light);
+  border-radius: 28px;
+  padding: 60px 48px;
+  text-align: left;
+  min-height: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about-card.dark {
+  background: var(--black);
+  color: var(--light);
+}
+.about-card .ac-eyebrow {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  opacity: 0.7;
+}
+.about-card h3 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.012em;
+  margin-bottom: 14px;
+}
+.about-card p {
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--grey2);
+  margin-bottom: 22px;
+}
+.about-card.dark p { color: rgba(255,255,255,0.7); }
+.about-card .ac-link {
+  font-size: 17px;
+  color: var(--blue);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.about-card .ac-link::after { content: '›'; font-size: 20px; transform: translateY(-1px); }
+.about-card .visual {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  font-size: 80px;
+  opacity: 0.15;
+}
+
+/* ─── SERVICES ─── */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.service-card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 48px 40px;
+  text-align: left;
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  min-height: 480px;
+}
+.service-card.featured {
+  background: var(--black);
+  color: var(--light);
+  border: none;
+}
+.service-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 12px;
+}
+.service-card.featured .service-eyebrow { color: #5fb4ff; }
+.service-card h3 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+.service-card .sc-desc {
+  font-size: 17px;
+  color: var(--grey2);
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+.service-card.featured .sc-desc { color: rgba(255,255,255,0.65); }
+.service-features {
+  font-size: 15px;
+  color: var(--grey2);
+  margin-bottom: auto;
+  padding-bottom: 32px;
+}
+.service-card.featured .service-features { color: rgba(255,255,255,0.7); }
+.service-feat {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.service-card.featured .service-feat { border-color: rgba(255,255,255,0.12); }
+.service-feat::before {
+  content: '';
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--blue);
+  flex-shrink: 0;
+}
+.service-card.featured .service-feat::before { background: #5fb4ff; }
+.service-feat:last-child { border-bottom: none; }
+.service-price {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+.service-price-sub {
+  font-size: 13px;
+  color: var(--grey);
+  margin-bottom: 20px;
+}
+.service-card.featured .service-price-sub { color: rgba(255,255,255,0.5); }
+.service-cta {
+  display: inline-block;
+  background: var(--blue);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 980px;
+  text-decoration: none;
+  font-size: 15px;
+  align-self: flex-start;
+  transition: background 0.2s;
+}
+.service-cta:hover { background: var(--blue2); }
+.service-card.featured .service-cta { background: #fff; color: var(--black); }
+
+/* ─── PROOF / TESTIMONIALS ─── */
+.proof-section {
+  padding: 140px 22px;
+  background: #fff;
+}
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.proof-item {
+  aspect-ratio: 1;
+  background: var(--light);
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.proof-item .pi-photo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d2d2d7 0%, #aaa 100%);
+  margin-bottom: auto;
+}
+.proof-item .pi-name {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.proof-item .pi-handle {
+  font-size: 13px;
+  color: var(--grey);
+}
+
+/* ─── BIG QUOTE ─── */
+.big-quote {
+  padding: 180px 22px;
+  background: var(--black);
+  color: var(--light);
+  text-align: center;
+}
+.big-quote .bq-text {
+  font-size: 56px;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  max-width: 900px;
+  margin: 0 auto 32px;
+}
+.big-quote .bq-text em {
+  font-style: normal;
+  color: #5fb4ff;
+}
+.big-quote .bq-author {
+  font-size: 17px;
+  color: rgba(255,255,255,0.55);
+}
+
+/* ─── CTA / FOOTER ─── */
+.cta-section {
+  padding: 140px 22px;
+  background: var(--light);
+  text-align: center;
+}
+.cta-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 32px;
+}
+.btn-primary {
+  background: var(--blue);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 980px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: background 0.2s;
+}
+.btn-primary:hover { background: var(--blue2); }
+.btn-secondary {
+  background: #fff;
+  color: var(--black);
+  padding: 12px 28px;
+  border-radius: 980px;
+  text-decoration: none;
+  font-size: 17px;
+  border: 1px solid var(--line);
+}
+
+footer {
+  background: var(--light);
+  padding: 40px 22px;
+  font-size: 12px;
+  color: var(--grey);
+  text-align: center;
+  border-top: 1px solid var(--line);
+}
+footer a { color: var(--grey2); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+/* ─── ADAPTIVE ─── */
+@media (max-width: 900px) {
+  .hero-h1, .h2-large { font-size: 48px; }
+  .h2 { font-size: 36px; }
+  .hero-sub, .lead { font-size: 18px; }
+  .about-split, .services-grid, .proof-grid { grid-template-columns: 1fr; }
+  .hero-image { height: 280px; }
+  .big-quote .bq-text { font-size: 32px; }
+  .section { padding: 80px 22px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#">keeb</a>
+    <div class="nav-links">
+      <a class="nav-link" href="#about">Обо мне</a>
+      <a class="nav-link" href="#services">Программы</a>
+      <a class="nav-link" href="#proof">Девушки</a>
+      <a class="nav-link" href="#contact">Связаться</a>
+    </div>
+    <a class="nav-cta" href="#contact">Записаться ›</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">keeb</div>
+  <h1 class="hero-h1">Тело, которое<br><em>хочется носить.</em></h1>
+  <p class="hero-sub">Персональный онлайн-тренер. Программа под тебя. Результат — через 12 недель.</p>
+  <div class="hero-ctas">
+    <a href="#services" class="hero-cta-primary">Выбрать программу</a>
+    <a href="#about" class="hero-cta-link">Узнать больше</a>
+  </div>
+  <div class="hero-image">
+    <div class="placeholder">
+      Здесь — твоё видео<br>
+      <strong>Один кадр. Тренировка крупным планом. Естественный свет.</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SPLIT -->
+<section class="section section-bg-light" id="about">
+  <div class="eyebrow eyebrow-blue">Подход</div>
+  <h2 class="h2 h2-large">Не диета.<br>Не зал.<br>Система.</h2>
+  <p class="lead">Четыре года работы с премиум-аудиторией. Я не ломаю тебя — встраиваюсь в твою жизнь.</p>
+
+  <div class="about-split" style="margin-top:60px;">
+    <div class="about-card">
+      <div>
+        <div class="ac-eyebrow">Метод</div>
+        <h3>Тренировки<br>под твоё тело.</h3>
+        <p>Индивидуальная программа. Видео-разборы техники. Корректировка каждые 2 недели.</p>
+        <a href="#" class="ac-link">Как это работает</a>
+      </div>
+      <div class="visual">⚪</div>
+    </div>
+    <div class="about-card dark">
+      <div>
+        <div class="ac-eyebrow">Питание</div>
+        <h3>Привычки,<br>а не правила.</h3>
+        <p>Без запретов и подсчёта калорий. Система, которая работает после программы.</p>
+        <a href="#" class="ac-link" style="color:#5fb4ff;">Что я предлагаю</a>
+      </div>
+      <div class="visual" style="color:#fff;">●</div>
+    </div>
+  </div>
+</section>
+
+<!-- BIG QUOTE -->
+<section class="big-quote">
+  <div class="bq-text">«За 12 недель я перестала<br>оправдываться<br><em>за своё тело.»</em></div>
+  <div class="bq-author">— Маша, 32, Москва</div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="eyebrow eyebrow-blue">Программы</div>
+  <h2 class="h2">Выбери своё.</h2>
+  <p class="lead">Три уровня вовлечённости. От тренировок 1-в-1 до полного наставничества.</p>
+
+  <div class="services-grid" style="margin-top:60px;">
+    <div class="service-card">
+      <div class="service-eyebrow">Базово</div>
+      <h3>Тренировки<br>лично</h3>
+      <p class="sc-desc">Индивидуальные занятия 1-в-1, контроль техники, разбор каждого упражнения.</p>
+      <div class="service-features">
+        <div class="service-feat">Программа под твои цели</div>
+        <div class="service-feat">Контроль техники и дыхания</div>
+        <div class="service-feat">Работа с осанкой</div>
+      </div>
+      <div class="service-price">от 2 000 AED</div>
+      <div class="service-price-sub">≈ 52 000 ₽ · блок из 10 тренировок</div>
+      <a href="#" class="service-cta">Записаться</a>
+    </div>
+
+    <div class="service-card featured">
+      <div class="service-eyebrow">Хит</div>
+      <h3>Онлайн<br>под ключ</h3>
+      <p class="sc-desc">3 месяца сопровождения. Тренировки, питание, ответы 24/7, разбор техники по видео.</p>
+      <div class="service-features">
+        <div class="service-feat">Программа + видео упражнений</div>
+        <div class="service-feat">Комментарии под каждое видео</div>
+        <div class="service-feat">Питание как система</div>
+        <div class="service-feat">Чат на весь срок</div>
+      </div>
+      <div class="service-price">2 000 AED</div>
+      <div class="service-price-sub">≈ 52 000 ₽ · 3 месяца · ~580 ₽ в день</div>
+      <a href="#" class="service-cta">Записаться</a>
+    </div>
+
+    <div class="service-card">
+      <div class="service-eyebrow">Премиум</div>
+      <h3>Личное<br>наставничество</h3>
+      <p class="sc-desc">Прямое участие в твоём пути. Видеозвонки 1-в-1. Работа с телом и мышлением.</p>
+      <div class="service-features">
+        <div class="service-feat">Видеозвонки еженедельно</div>
+        <div class="service-feat">Работа с мышлением</div>
+        <div class="service-feat">Полное сопровождение</div>
+      </div>
+      <div class="service-price">от 3 000 $</div>
+      <div class="service-price-sub">≈ 270 000 ₽ · максимум за минимум времени</div>
+      <a href="#" class="service-cta">Узнать подробнее</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="proof-section" id="proof">
+  <div class="eyebrow eyebrow-blue" style="text-align:center;">Результаты</div>
+  <h2 class="h2" style="text-align:center;">Девушки,<br>которые уже занимаются.</h2>
+  <p class="lead" style="text-align:center;">Реальные истории. Реальные тела. Реальные жизни — после.</p>
+
+  <div class="proof-grid" style="margin-top:60px;">
+    <div class="proof-item">
+      <div class="pi-photo"></div>
+      <div>
+        <div class="pi-name">Маша</div>
+        <div class="pi-handle">@maru_nich</div>
+      </div>
+    </div>
+    <div class="proof-item">
+      <div class="pi-photo"></div>
+      <div>
+        <div class="pi-name">Нина</div>
+        <div class="pi-handle">@nina13nina</div>
+      </div>
+    </div>
+    <div class="proof-item">
+      <div class="pi-photo"></div>
+      <div>
+        <div class="pi-name">Алекс</div>
+        <div class="pi-handle">@raleks__</div>
+      </div>
+    </div>
+    <div class="proof-item">
+      <div class="pi-photo"></div>
+      <div>
+        <div class="pi-name">Маша</div>
+        <div class="pi-handle">@numashaaaa</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <div class="eyebrow eyebrow-blue">Готова начать?</div>
+  <h2 class="h2 h2-large">Первый шаг —<br>один разговор.</h2>
+  <p class="lead">Бесплатная диагностика. 30 минут. Узнаёшь — подходит ли тебе мой подход.</p>
+  <div class="cta-buttons">
+    <a href="#" class="btn-primary">Telegram</a>
+    <a href="#" class="btn-secondary">WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 keeb · Персональный тренинг для девушек · <a href="#">Политика конфиденциальности</a>
+</footer>
+
+</body>
+</html>
