@@ -637,6 +637,24 @@ h1, h2, h3 {
   gap: 14px;
   max-width: 1200px; margin: 56px auto 0;
 }
+.fear-card.hidden-mobile { display: none; }
+.fears-grid.expanded .fear-card.hidden-mobile { display: block; }
+.fears-toggle {
+  display: none;
+  margin: 32px auto 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--black);
+  padding: 12px 28px;
+  border-radius: 980px;
+  font-size: 15px; font-weight: 500;
+  cursor: pointer; transition: all 0.2s;
+  letter-spacing: -0.01em;
+}
+.fears-toggle:hover { background: var(--light); }
+@media (max-width: 640px) {
+  .fears-toggle { display: inline-block; }
+}
 .fear-card {
   background: var(--light);
   border-radius: 22px;
@@ -987,6 +1005,7 @@ h1, h2, h3 {
     <a href="#hero" class="nav-logo">Даня <span>keeb</span></a>
     <div class="nav-links">
       <a href="#about">Обо мне</a>
+      <a href="#approach">Подход</a>
       <a href="#results">Результаты</a>
       <a href="#services">Программы</a>
       <a href="#contact" class="nav-cta">Записаться</a>
@@ -1032,7 +1051,7 @@ h1, h2, h3 {
 
 <!-- ════════════════ DEVUSHKI SLIDER ════════════════ -->
 <section class="devushki">
-  <div class="devushki-label">Девушки, которые уже занимаются</div>
+  <div class="devushki-label">Девушки, которые уже занимаются · истории — ниже</div>
   <div class="clients-slider" id="clientsSlider">
     <a href="https://www.instagram.com/maru_nich" class="client-card" target="_blank" rel="noopener">
       <img src="girls/girl_1.jpg" alt="Маша @maru_nich" class="client-img">
@@ -1144,7 +1163,7 @@ h1, h2, h3 {
 </section>
 
 <!-- ════════════════ APPROACH ════════════════ -->
-<section class="section light-bg">
+<section class="section light-bg" id="approach">
   <div class="container">
     <div class="eyebrow">Подход</div>
     <h2 class="h-display section-title">Не как все.</h2>
@@ -1177,14 +1196,6 @@ h1, h2, h3 {
         <p>Со мной не страшно, не стыдно, не надо притворяться, что всё понимаешь. Многие говорят: <em>«впервые не боюсь зала»</em>. Именно это меняет всё.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ════════════════ BIG QUOTE ════════════════ -->
-<section class="big-quote">
-  <div class="container">
-    <div class="big-quote-text">«За 12 недель я перестала<br>оправдываться<br><em>за своё тело.»</em></div>
-    <div class="big-quote-author">— Полина, после месяца работы</div>
   </div>
 </section>
 
@@ -1353,6 +1364,14 @@ h1, h2, h3 {
   </div>
 </section>
 
+<!-- ════════════════ BIG QUOTE ════════════════ -->
+<section class="big-quote">
+  <div class="container">
+    <div class="big-quote-text">«За 12 недель я перестала<br>оправдываться<br><em>за своё тело.»</em></div>
+    <div class="big-quote-author">— Полина, после месяца работы</div>
+  </div>
+</section>
+
 <!-- ════════════════ FEARS ════════════════ -->
 <section class="section light-bg" id="fears">
   <div class="container">
@@ -1360,7 +1379,7 @@ h1, h2, h3 {
     <h2 class="h-display section-title">«Я думала, что это <em>не для меня».</em></h2>
     <p class="lead section-lead">Самые частые страхи — и что происходит, когда их всё-таки преодолевают.</p>
 
-    <div class="fears-grid">
+    <div class="fears-grid" id="fearsGrid">
       <div class="fear-card">
         <div class="fear-mark">"</div>
         <div class="fear-tag">Боюсь перекачаться</div>
@@ -1401,7 +1420,7 @@ h1, h2, h3 {
         </div>
       </div>
 
-      <div class="fear-card">
+      <div class="fear-card hidden-mobile">
         <div class="fear-mark">"</div>
         <div class="fear-tag">Это больно и я сломаюсь</div>
         <p class="fear-text">После двух травм у меня была фобия. Любое жжение в мышцах казалось опасным. Начали мягко — с контролем техники. <strong>Ни одной травмы за 6 месяцев</strong>. Теперь я слышу своё тело.</p>
@@ -1411,7 +1430,7 @@ h1, h2, h3 {
         </div>
       </div>
 
-      <div class="fear-card">
+      <div class="fear-card hidden-mobile">
         <div class="fear-mark">"</div>
         <div class="fear-tag">Мне некомфортно в зале</div>
         <p class="fear-text">Заходила в зал и чувствовала, что все смотрят. Тренировалась в углу, избегала свободных весов. Даниил показал зал как рабочее пространство. Теперь хожу туда <strong>спокойно и уверенно</strong>.</p>
@@ -1421,6 +1440,7 @@ h1, h2, h3 {
         </div>
       </div>
     </div>
+    <button class="fears-toggle" id="fearsToggle" type="button">Показать ещё 2 отзыва</button>
   </div>
 </section>
 
@@ -1657,6 +1677,18 @@ h1, h2, h3 {
       if (!isDown) return;
       e.preventDefault();
       slider.scrollLeft = scrollLeft - (e.pageX - slider.offsetLeft - startX) * 1.2;
+    });
+  }
+})();
+
+// Fears toggle (mobile)
+(function() {
+  var btn = document.getElementById('fearsToggle');
+  var grid = document.getElementById('fearsGrid');
+  if (btn && grid) {
+    btn.addEventListener('click', function() {
+      var expanded = grid.classList.toggle('expanded');
+      btn.textContent = expanded ? 'Свернуть' : 'Показать ещё 2 отзыва';
     });
   }
 })();
